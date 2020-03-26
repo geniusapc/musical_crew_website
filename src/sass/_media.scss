@@ -1,0 +1,13 @@
+@media(max-width:768px) {
+    .content {
+        // flex-wrap: wrap;
+        // // flex-flow: column wrap;
+        &:nth-child(1) {
+            margin: 3.5rem 1rem;
+            padding: .5rem;
+        }
+        &-image {
+            display: none;
+        }
+    }
+}
