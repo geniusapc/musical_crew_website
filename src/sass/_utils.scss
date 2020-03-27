@@ -1,0 +1,30 @@
+@import './variables';
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: $bg-color;
+}
+
+.btn {
+    background-color: $primary;
+    border: none;
+    padding: .8rem 2.8rem;
+    border-radius: .2rem;
+    color: $white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    // &:active {
+    //     transform: translateY(4px);
+    // }
+    &:hover {
+        transform: translateY(4px);
+        // background-color: blue;
+    }
+}
