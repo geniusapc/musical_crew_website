@@ -10,6 +10,7 @@ a {
 
 body {
     background-color: $bg-color;
+    // overflow-x: hidden;
 }
 
 .btn {
@@ -20,11 +21,14 @@ body {
     color: $white;
     font-size: 1.1rem;
     cursor: pointer;
-    // &:active {
-    //     transform: translateY(4px);
-    // }
-    &:hover {
+    outline: none;
+    &:active {
         transform: translateY(4px);
+        // box-shadow: 2px 2px 2px 1px #ccc;
+        ;
+    }
+    &:hover {
+        transform: translateY(-4px);
         // background-color: blue;
     }
 }
