@@ -3,6 +3,7 @@ import Home from "../pages/Home";
 import Header from "../components/Header/Header";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import Footer from '../components/Footer';
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -28,6 +29,7 @@ const Layouts: React.FC<RouteProps> = () => {
 					<Route exact path="/login" component={Login} />
 					<Route exact path="/create-account" component={Register} />
 				</Switch>
+				<Footer/>
 			</div>
 		</Router>
 	);

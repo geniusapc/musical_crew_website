@@ -1,48 +1,37 @@
 import React from "react";
-import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
-import Grid, { GridSpacing } from "@material-ui/core/Grid";
-import FormLabel from "@material-ui/core/FormLabel";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import RadioGroup from "@material-ui/core/RadioGroup";
-import Radio from "@material-ui/core/Radio";
-import Paper from "@material-ui/core/Paper";
+import HotRelease from "./HotRelease";
 
-const useStyles = makeStyles((theme: Theme) =>
-	createStyles({
-		root: {
-			flexGrow: 1
-		},
-		paper: {
-			height: 140,
-			width: 100
-		},
-		control: {
-			padding: theme.spacing(2)
-		}
-	})
-);
-
-const HotRelease: React.FC = () => {
-	const [spacing, setSpacing] = React.useState<GridSpacing>(2);
-	const classes = useStyles();
-
-	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-		setSpacing(Number((event.target as HTMLInputElement).value) as GridSpacing);
-	};
-
+const SectionA: React.FC = () => {
+	// const store = createStore(
+	// 	reducer, /* preloadedState, */
+	//  +  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+	//   );
 	return (
-		<Grid container className={classes.root} spacing={2}>
-			<Grid item xs={12}>
-				<Grid container justify="center" spacing={spacing}>
-					{[0, 1].map(value => (
-						<Grid key={value} item>
-							<Paper className={classes.paper} />
-						</Grid>
-					))}
-				</Grid>
-			</Grid>
-		</Grid>
+		<div className="sectionA">
+			<div className="sectionA-list">
+				<h3>
+					Latest <span>Release</span>
+				</h3>
+				<p>Lorem ipsum dolor sit, amet consectetur magnam labore.</p>
+				<div className="">
+				<HotRelease />
+				<p>svdhsvkjsdvsdv</p>
+				<p>svdhsvkjsdvsdv</p>
+				<p>svdhsvkjsdvsdv</p>
+				<p>svdhsvkjsdvsdv</p>
+				</div>
+				
+			</div>
+	
+
+			<div className="sectionA-video">
+				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia blanditiis, laborum veritatis hic error harum unde asperiores! Quas, asperiores at ipsam libero, rerum ad quibusdam est, sequi natus repudiandae placeat.</p>
+				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia blanditiis, laborum veritatis hic error harum unde asperiores! Quas, asperiores at ipsam libero, rerum ad quibusdam est, sequi natus repudiandae placeat.</p>
+				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia blanditiis, laborum veritatis hic error harum unde asperiores! Quas, asperiores at ipsam libero, rerum ad quibusdam est, sequi natus repudiandae placeat.</p>
+				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia blanditiis, laborum veritatis hic error harum unde asperiores! Quas, asperiores at ipsam libero, rerum ad quibusdam est, sequi natus repudiandae placeat.</p>
+			</div>
+		</div>
 	);
 };
 
-export default HotRelease;
+export default SectionA;

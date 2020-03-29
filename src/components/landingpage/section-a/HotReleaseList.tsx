@@ -1,26 +1,19 @@
 import React from "react";
 
 interface Props {
-	musicTitle: string;
-	serialNumber: string;
-	duration: number;
+	title: string;
+	serialno: number;
+	duration: string;
 	link?: string;
 }
 
-const HotReleaseList: React.FC<Props> = ({
-	musicTitle,
-	serialNumber,
-	duration,
-	link
-}) => {
+
+const HotReleaseList: React.FC <Props>= ({serialno,title,duration}) => {
 	return (
-		<div>
-			<ul>
-				<li>
-					<span>{serialNumber}</span>
-					{musicTitle} <span>{duration}</span>
-				</li>
-			</ul>
+		<div className="music-list">
+			<span>{serialno}</span>
+			<span>{title}</span>
+			<span>{duration}</span>
 		</div>
 	);
 };
