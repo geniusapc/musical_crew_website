@@ -27,29 +27,10 @@
             height: 2.4rem;
             width: 25%;
             input {
-                border-radius: .2rem;
-                border-top-right-radius: 0;
-                border-bottom-right-radius: 0;
-                padding: .3rem 3rem;
-                height: 2rem;
-                border: none;
-                outline: none;
-                margin: 0 0 0 -.9rem;
-                width: 100%;
-                opacity: .9;
-                &:focus {
-                    border: $primary 1px solid;
-                }
+                @include inputSearch;
             }
             span {
-                color: $white;
-                background-color: $primary;
-                padding: .7rem 1rem;
-                border-radius: .3rem;
-                margin: 0 -1rem 0 0rem;
-                border-top-left-radius: 0;
-                border-bottom-left-radius: 0;
-                cursor: pointer;
+                @include searchBtn;
             }
         }
     }
@@ -103,12 +84,10 @@
     
     //*****Login*****//
     .form {
-        // @include DisplayFlex(row, nowrap);
         display: grid;
         grid-template-columns: 2fr 1fr;
         background-color: $black;
         &-image {
-            // display: none;
             margin: -.4rem 0 0 1.6rem;
             img {
                 height: 30rem;
@@ -117,7 +96,7 @@
     }
     
     .form-field {
-        background-color: rgb(17, 15, 15);
+        background-color: $gray;
         padding: 2rem 3rem 0 3rem;
         height: 90%;
         width: 60%;
@@ -152,6 +131,137 @@
                 border-bottom: $white 1px solid;
                 outline: none;
                 color: $white;
+            }
+        }
+    }
+    
+    //****section A*****//
+    .sectionA {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 auto;
+        text-align: center;
+        background-color: $gray;
+        height: auto;
+        &-list {
+            // flex-basis: 50%;
+            width: 100%;
+            h3 {
+                color: $primary;
+                font-size: 2.3rem;
+                margin: .7rem 0;
+                span {
+                    color: $white;
+                }
+            }
+            p {
+                color: $white;
+                margin: .9rem 0;
+            }
+        }
+        &-video {
+            // flex-basis: 50%;
+            width: 100%;
+            background-color: $primary;
+        }
+    }
+    
+    .music-list {
+        color: $white;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-bottom: .5px solid #414141d7;
+        margin: 0 auto;
+        &:hover {
+            background: $light;
+            cursor: pointer;
+            transition: background .4s ease-out;
+        }
+        span {
+            margin: 1rem 2rem;
+            &:nth-child(1) {
+                background-color: $primary;
+                padding: .3rem .6rem;
+                border-radius: .2rem;
+                margin: .7rem .3rem;
+                font-weight: 500;
+            }
+        }
+    }
+    
+    .wrapper {
+        max-height: 15rem;
+        overflow-y: scroll;
+        width: 50%;
+        margin: 0 auto;
+    }
+    
+    //******Subscribe Section*****//
+    .subscribe {
+        background: linear-gradient(to left, rgba(51, 22, 22, 0.7), rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("../images/lady-sings-the-blues.jpg")no-repeat center;
+        height: 200px;
+        width: auto;
+        background-size: cover;
+        h5 {
+            color: $white;
+            text-align: center;
+            margin: -.1rem 0;
+            padding: 2rem 0 0 0;
+            font-size: 1.4rem;
+            span {
+                color: $primary;
+            }
+        }
+        &-search {
+            @include DisplayFlex(row,
+            nowrap);
+            width: 25%;
+            margin: 0 auto;
+            padding: 4rem 0;
+            input {
+                @include inputSearch;
+            }
+            span {
+                @include searchBtn;
+            }
+        }
+    }
+    
+    ///*****Footer******//
+    .footer {
+        color: $white;
+        text-align: center;
+        &-img {
+            img {
+                height: 8rem;
+                width: 10rem;
+            }
+        }
+        &>div {
+            margin: .4rem 0;
+        }
+        &-list {
+            ul {
+                display: flex;
+                justify-content: center;
+                li {
+                    margin: .4rem 1rem;
+                    list-style: none;
+                    a {
+                        color: $white;
+                        &:hover {
+                            color: $primary;
+                        }
+                    }
+                }
+            }
+        }
+        &-team {
+            i {
+                color: $primary;
             }
         }
     }

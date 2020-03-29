@@ -22,4 +22,16 @@
             width: 100% !important;
         }
     }
+    .sectionA {
+        grid-template-columns: 1fr !important;
+        .wrapper {
+            width: 80%;
+        }
+    }
+    .subscribe {
+        // display: none;
+        &-search {
+            width: 60% !important;
+        }
+    }
 }
