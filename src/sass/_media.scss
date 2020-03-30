@@ -8,6 +8,14 @@
             display: none;
         }
     }
+    .header {
+        .header-nav {
+            display: none;
+        }
+        .menu {
+            display: block;
+        }
+    }
     .form {
         align-items: center !important;
         position: absolute;
