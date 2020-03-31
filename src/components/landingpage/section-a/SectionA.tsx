@@ -1,11 +1,14 @@
 import React from "react";
 import HotRelease from "./HotRelease";
+import spotify from "../../../images/spotify.png";
+import apple from "../../../images/apple.png";
+import google from "../../../images/google.png";
 
-const SectionA: React.FC = () => {
-	// const store = createStore(
-	// 	reducer, /* preloadedState, */
-	//  +  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-	//   );
+interface Props {
+	frameborder?: string;
+}
+
+const SectionA: React.FC<Props> = () => {
 	return (
 		<div className="sectionA">
 			<div className="sectionA-list">
@@ -13,22 +16,20 @@ const SectionA: React.FC = () => {
 					Latest <span>Release</span>
 				</h3>
 				<p>Lorem ipsum dolor sit, amet consectetur magnam labore.</p>
-				<div className="">
 				<HotRelease />
-				<p>svdhsvkjsdvsdv</p>
-				<p>svdhsvkjsdvsdv</p>
-				<p>svdhsvkjsdvsdv</p>
-				<p>svdhsvkjsdvsdv</p>
+				<div>
+					<img src={spotify} alt="spotify" />
+					<img src={google} alt="google" />
+					<img src={apple} alt="apple" />
 				</div>
-				
 			</div>
-	
 
 			<div className="sectionA-video">
-				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia blanditiis, laborum veritatis hic error harum unde asperiores! Quas, asperiores at ipsam libero, rerum ad quibusdam est, sequi natus repudiandae placeat.</p>
-				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia blanditiis, laborum veritatis hic error harum unde asperiores! Quas, asperiores at ipsam libero, rerum ad quibusdam est, sequi natus repudiandae placeat.</p>
-				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia blanditiis, laborum veritatis hic error harum unde asperiores! Quas, asperiores at ipsam libero, rerum ad quibusdam est, sequi natus repudiandae placeat.</p>
-				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia blanditiis, laborum veritatis hic error harum unde asperiores! Quas, asperiores at ipsam libero, rerum ad quibusdam est, sequi natus repudiandae placeat.</p>
+				<iframe
+					width="560"
+					height="315"
+					src="https://www.youtube.com/embed/ae2iX6vZCoM"
+					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
 			</div>
 		</div>
 	);
