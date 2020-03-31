@@ -245,11 +245,24 @@
                 color: $white;
                 margin: .9rem 0;
             }
+            div {
+                img {
+                    height: 3rem;
+                    width: 6rem;
+                    margin: 2rem 1rem 0 0;
+                    border-radius: .7rem;
+                }
+            }
         }
         &-video {
-            // flex-basis: 50%;
             width: 100%;
-            background-color: $primary;
+            // background-color: $primary;
+            height: 450px;
+            iframe {
+                width: 100%;
+                height: 100%;
+                border: none;
+            }
         }
     }
     
@@ -286,6 +299,57 @@
         margin: 0 auto;
     }
     
+    //*****Card*****//
+    .eventCard {
+        background-color: rgba($color: $gray, $alpha: 1.0);
+        box-shadow: 0px 2px 1px 2px rgb(46, 46, 46);
+        margin: 1rem;
+        border-radius: .4rem;
+        &-body {
+            color: $white;
+            img {
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                border-top-right-radius: .4rem;
+                border-top-left-radius: .4rem;
+                width: 100%;
+                height: 200px;
+                background-position: center;
+            }
+            h3 {
+                font-size: 1.6rem;
+                margin: .6rem .7rem;
+                padding: 1rem 1rem .1rem .6rem;
+            }
+            p {
+                word-break: break-all;
+                margin: .8rem 0 2rem 0;
+                padding: 1rem 1rem .3rem .6rem;
+            }
+            div {
+                margin: 2rem .7rem;
+                // padding: -1rem .6rem 0rem .6rem;
+            }
+        }
+    }
+    
+    .event-header {
+        color: $white;
+        font-size: 1.6rem;
+        text-align: center;
+        margin-top: 1.5rem;
+        padding: .6rem 0;
+        span {
+            color: $primary;
+        }
+    }
+    
+    .cardGrid {
+        display: flex;
+        margin: 0 2rem;
+        // flex-wrap: wrap-reverse;
+    }
+    
     //******Subscribe Section*****//
     .subscribe {
         background: linear-gradient(to left, rgba(51, 22, 22, 0.7), rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("../images/lady-sings-the-blues.jpg")no-repeat center;
@@ -310,6 +374,7 @@
             padding: 4rem 0;
             input {
                 @include inputSearch;
+                padding: 1.3rem;
             }
             span {
                 @include searchBtn;
@@ -352,3 +417,22 @@
             }
         }
     }
+    
+    .gallery {
+        background: $gray;
+        padding: 1rem .5rem;
+        overflow: hidden !important;
+    }
+    
+    .gallery-image {
+        cursor: pointer;
+        filter: grayscale(10);
+        &:hover {
+            // transform: scale(.8);
+            filter: blur(0px);
+        }
+    }
+    
+    // .grid {
+    //     display: flex;
+    // }
