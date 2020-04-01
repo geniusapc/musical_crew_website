@@ -11,6 +11,13 @@ interface Props {
 const SectionA: React.FC<Props> = () => {
 	return (
 		<div className="sectionA">
+			<div className="sectionA-video">
+				<iframe
+					width="560"
+					height="315"
+					src="https://www.youtube.com/embed/ae2iX6vZCoM"
+					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+			</div>
 			<div className="sectionA-list">
 				<h3>
 					Latest <span>Release</span>
@@ -22,14 +29,6 @@ const SectionA: React.FC<Props> = () => {
 					<img src={google} alt="google" />
 					<img src={apple} alt="apple" />
 				</div>
-			</div>
-
-			<div className="sectionA-video">
-				<iframe
-					width="560"
-					height="315"
-					src="https://www.youtube.com/embed/ae2iX6vZCoM"
-					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
 			</div>
 		</div>
 	);

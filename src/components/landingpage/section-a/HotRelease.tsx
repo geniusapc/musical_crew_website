@@ -1,19 +1,20 @@
 import React from "react";
-import { useSelector,TypedUseSelectorHook } from "react-redux";
+import { useSelector, TypedUseSelectorHook } from "react-redux";
 import HotReleaseList from "./HotReleaseList";
 
 interface RootState {
 	Music: Array<{
-		id:number;
-		title:string;
-		duration:string;
+		id: number;
+		title: string;
+		duration: string;
 	}>;
-  }
-  
-  
+}
+
 const HotRelease: React.FC = () => {
 	const useTypedSelector: TypedUseSelectorHook<RootState> = useSelector;
-	const newMusicList = useTypedSelector(state => state.Music);
+	let newMusicList = useTypedSelector(state => state.Music);
+	// console.log(newMusicList = []);
+	
 	return (
 		<div className="wrapper">
 			{newMusicList.map(music => (
