@@ -1,3 +1,29 @@
+@import './mixixns';
+@media(max-width:1142px) {
+    .content {
+        &:nth-child(1) {
+            margin: 3.5rem 1rem;
+            padding: .5rem;
+        }
+        &-image {
+            display: none;
+        }
+    }
+}
+
+@media(max-width:1101px) {
+    .sectionA {
+        grid-template-columns: 1fr !important;
+        .sectionA-list {
+            .music-list {
+                .wrapper {
+                    width: 80%;
+                }
+            }
+        }
+    }
+}
+
 @media(max-width:768px) {
     .content {
         &:nth-child(1) {
@@ -14,6 +40,32 @@
         }
         .menu {
             display: block;
+        }
+        .small-btn {
+            color: $white;
+            margin: 1.3rem 7rem 0 0rem;
+            cursor: pointer;
+        }
+        .show-search {
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity .4s ease-in;
+        }
+        .header-search {
+            @include PositionCenter(17%, 50%, absolute);
+            align-items: center;
+            margin: auto;
+            transition: all .2s ease-out;
+            // background-color: black;
+            input {
+                padding: 1.3rem 7rem;
+                // color: red;
+                // width: 100%;
+                // background-color: rgb(212, 212, 212);
+                // &::placeholder {
+                //     color: $primary;
+                // }
+            }
         }
     }
     .form {
@@ -41,5 +93,8 @@
         &-search {
             width: 60% !important;
         }
+    }
+    .cardGrid {
+        flex-wrap: wrap-reverse;
     }
 }
