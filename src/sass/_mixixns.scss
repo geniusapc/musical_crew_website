@@ -32,3 +32,11 @@
     border-bottom-left-radius: 0;
     cursor: pointer;
 }
+
+@mixin PositionCenter ($top, $left, $position) {
+    position: $position;
+    top: $top;
+    left: $left;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+}
