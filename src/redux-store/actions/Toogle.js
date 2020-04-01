@@ -3,3 +3,9 @@ export const ToogleSideBar = () => {
         type: "TOOGLE"
     }
 };
+
+export const CollapseSideBar = () => {
+    return {
+        type: "CLOSE"
+    }
+}
