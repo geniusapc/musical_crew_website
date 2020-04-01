@@ -1,7 +1,6 @@
 import React from "react";
 import ContentPage from "../components/landingpage/ContentPage";
 import SectionA from "../components/landingpage/section-a/SectionA";
-import GalleryList from "../components/landingpage/section-b/GalleryGridList";
 import SectionB from "../components/landingpage/section-b/SectionB";
 import Subscribe from "../components/Subscribe";
 
