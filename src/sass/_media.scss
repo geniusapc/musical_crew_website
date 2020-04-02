@@ -22,6 +22,20 @@
             }
         }
     }
+    .form {
+        grid-template-columns: 1fr !important;
+        padding: 3rem 0;
+        margin: 2rem 0 !important;
+        &-image {
+            display: none;
+        }
+        .form-field {
+            width: 90%;
+        }
+    }
+    // .view-event {
+    //     grid-template-columns: 1fr !important;
+    // }
 }
 
 @media(max-width:768px) {
@@ -43,7 +57,7 @@
         }
         .small-btn {
             color: $white;
-            margin: 1.3rem 7rem 0 0rem;
+            margin: 1.3rem 5rem 0 0rem;
             cursor: pointer;
         }
         .show-search {
@@ -59,27 +73,7 @@
             // background-color: black;
             input {
                 padding: 1.3rem 7rem;
-                // color: red;
-                // width: 100%;
-                // background-color: rgb(212, 212, 212);
-                // &::placeholder {
-                //     color: $primary;
-                // }
             }
-        }
-    }
-    .form {
-        align-items: center !important;
-        position: absolute;
-        top: 55%;
-        left: 44%;
-        transform: translate(-50%, -50%);
-        background-color: $black;
-        &-image {
-            display: none;
-        }
-        &-field {
-            width: 100% !important;
         }
     }
     .sectionA {
@@ -96,5 +90,8 @@
     }
     .cardGrid {
         flex-wrap: wrap-reverse;
+    }
+    .view-event {
+        grid-template-columns: 1fr !important;
     }
 }
