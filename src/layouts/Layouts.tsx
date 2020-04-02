@@ -5,6 +5,10 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Galleries from '../pages/GalleryGridList';
 import Footer from "../components/Footer";
+import ViewEvents from '../components/landingpage/section-b/ViewEvent';
+
+
+
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useSelector, TypedUseSelectorHook, useDispatch } from "react-redux";
@@ -51,7 +55,9 @@ const Layouts: React.FC<RouteProps> = () => {
 					<Route exact path="/" component={Home} />
 					<Route exact path="/our-galleries" component={Galleries} />
 					<Route exact path="/login" component={Login} />
+					
 					<Route exact path="/create-account" component={Register} />
+					<Route exact path="/events" component={ViewEvents} />
 				</Switch>
 				<Footer />
 			</div>

@@ -7,7 +7,7 @@ const NavItems: React.FC= () => {
 		<>
 			<NavItem link={"wwww.test.com"} text={"Home"} />
 			<NavItem link={"wwww.test.com"} text={"About"} />
-			<NavItem link={"wwww.test.com"} text={"Downloads"} />
+			{/* <NavItem link={"wwww.test.com"} text={"Downloads"} /> */}
 		</>
 	);
 };
