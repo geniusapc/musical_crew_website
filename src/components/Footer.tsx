@@ -11,8 +11,7 @@ const Footer: React.FC = () => {
                 <li><a href="www.fdhvf.com">Ssrvices</a></li>
                 <li><a href="www.fdhvf.com">Ssrvices</a></li>
                 <li><a href="www.fdhvf.com">Ssrvices</a></li>
-                <li><a href="www.fdhvf.com">Ssrvices</a></li>
-                <li><a href="www.fdhvf.com">Ssrvices</a></li>
+               
             </ul>
         </div>
         <div className="footer-team">
