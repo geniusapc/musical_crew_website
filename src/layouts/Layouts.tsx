@@ -6,14 +6,21 @@ import Register from "../pages/Register";
 import Galleries from "../pages/GalleryGridList";
 import Footer from "../components/Footer";
 import ViewEvents from "../pages/ViewEvent";
-import ContactPage from '../pages/ContactPage';
-import ErrorPage from '../pages/ErrorPage';
+import ContactPage from "../pages/ContactPage";
+import ErrorPage from "../pages/ErrorPage";
+import AdminDashboard from "../admin-dashboard/AdminPage";
 
-import { BrowserRouter as Router, Switch, Route,Redirect } from "react-router-dom";
+import {
+	BrowserRouter as Router,
+	Switch,
+	Route,
+	Redirect,
+} from "react-router-dom";
 // import { useSelector, TypedUseSelectorHook, useDispatch } from "react-redux";
 // import { CollapseSideBar, ToogleSideBar } from "../redux-store/actions/Toogle";
 
 interface RouteProps {
+	close?:any;
 	// path?: string | string[];
 	// exact?: boolean;
 	// sensitive?: boolean;
@@ -25,7 +32,7 @@ interface RouteProps {
 // 	Toggle: Boolean;
 // }
 
-const Layouts: React.FC<RouteProps> = () => {
+const Layouts: React.FC<RouteProps> = ({close}) => {
 	// const useTypedSelector: TypedUseSelectorHook<RootState> = useSelector;
 	// let Toggle = useTypedSelector(state => state.Toggle);
 	// const dispatch = useDispatch();
@@ -43,22 +50,25 @@ const Layouts: React.FC<RouteProps> = () => {
 	// 	}
 	// }
 	return (
-		<Router>
-			<div>
-				<Header />
-				<Switch>
-					<Route exact path="/" component={Home} />
-					<Route exact path="/our-galleries" component={Galleries} />
-					<Route exact path="/login" component={Login} />
-					<Route exact path="/create-account" component={Register} />
-					<Route exact path="/events" component={ViewEvents} />
-					<Route exact path="/contact-us" component={ContactPage} />
-					<Route exact path="/page-not-found" component={ErrorPage} />
-					<Redirect to="/page-not-found"/>
-				</Switch>
-				<Footer />
-			</div>
-		</Router>
+	
+		<div >
+			<Router>
+			<Header />
+			<Switch>
+				<Route exact path="/" component={Home} />
+				<Route exact path="/our-galleries" component={Galleries} />
+				<Route exact path="/login" component={Login} />
+				<Route exact path="/create-account" component={Register} />
+				<Route exact path="/events" component={ViewEvents} />
+				<Route exact path="/contact-us" component={ContactPage} />
+				<Route exact path="/page-not-found" component={ErrorPage} />
+				<Route exact path="/admin" component={AdminDashboard} />
+				<Redirect to="/page-not-found" />
+			</Switch>
+			<Footer />
+			</Router>
+		</div>
+
 	);
 };
 
