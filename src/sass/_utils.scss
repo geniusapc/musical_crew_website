@@ -5,10 +5,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-a {
-    text-decoration: none;
+    a {
+        text-decoration: none !important;
+    }
 }
 
 ::-webkit-scrollbar {
@@ -35,9 +34,16 @@ a {
 
 body {
     background-color: $bg-color;
-    font-family: 'Baloo Thambi 2', cursive;
+    // font-family: 'Baloo Thambi 2', cursive;
     font-size: 1.1rem;
     line-height: 1.7;
+    font-weight: 0;
+    overflow: scroll;
+    scroll-behavior: smooth;
+}
+
+.red {
+    color: $primary;
 }
 
 .btn {

@@ -12,6 +12,32 @@
 }
 
 @media(max-width:1101px) {
+    .home {
+        .about-wrapper {
+            grid-template-columns: 1fr;
+        }
+        .about-emphasis {
+            height: 15rem;
+            width: 20rem;
+            span {
+                top: 40%;
+            }
+        }
+        .about-text {
+            margin: .3rem auto;
+            &-title {
+                span {
+                    font-weight: 2rem;
+                }
+            }
+        }
+        .about-emphasis-text {
+            h4 {
+                font-size: 4rem;
+                @include PositionCenter(20%, 50%, absolute)
+            }
+        }
+    }
     .sectionA {
         grid-template-columns: 1fr !important;
         .sectionA-list {
@@ -33,9 +59,6 @@
             width: 90%;
         }
     }
-    // .view-event {
-    //     grid-template-columns: 1fr !important;
-    // }
 }
 
 @media(max-width:768px) {
@@ -70,9 +93,12 @@
             align-items: center;
             margin: auto;
             transition: all .2s ease-out;
-            // background-color: black;
+            background-color: $primary;
             input {
-                padding: 1.3rem 7rem;
+                padding: 1.6rem 7rem;
+                background-color: transparent;
+                // color: $black !important;
+                // width: 100% !important
             }
         }
     }
@@ -83,9 +109,11 @@
         }
     }
     .subscribe {
-        // display: none;
+        h5 {
+            font-size: 1.2rem;
+        }
         &-search {
-            width: 60% !important;
+            width: 80% !important;
         }
     }
     .cardGrid {

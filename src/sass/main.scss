@@ -3,6 +3,7 @@
 @import './variables';
 @import './media';
 @import './mixixns';
+@import './animation';
 //***Header-section****//
 .header {
     display: flex;
@@ -86,9 +87,6 @@
     span:nth-child(2) {
         width: 63%;
     }
-    // span:nth-child(3) {
-    //     width: 43%;
-    // }
     .close {
         margin: 1rem -.2rem 1.6rem;
         span {
@@ -219,6 +217,19 @@
             border-bottom: $white 1px solid;
             outline: none;
             color: $white;
+            &:focus {
+                border-bottom: green 1px solid;
+            }
+        }
+        textarea {
+            background-color: transparent;
+            width: 90%;
+            height: 5rem;
+            color: $white;
+            outline: none;
+            &:focus {
+                border: 1px solid green;
+            }
         }
     }
 }
@@ -232,7 +243,6 @@
     background-color: $gray;
     height: auto;
     &-list {
-        // flex-basis: 50%;
         width: 100%;
         h3 {
             color: $primary;
@@ -286,7 +296,7 @@
         word-wrap: none;
         &:nth-child(1) {
             background-color: $primary;
-            padding: .3rem .6rem;
+            padding: .1rem .5rem;
             border-radius: .2rem;
             margin: .7rem .3rem;
             font-weight: 500;
@@ -304,10 +314,10 @@
 //*****Card*****//
 .eventCard {
     background-color: rgba($color: $gray, $alpha: 1.0);
-    margin: 1rem;
+    margin: 0 1rem 1rem 1rem;
     border-radius: .4rem;
     border: none;
-    // width: 70%;
+    padding: 0 0 .3rem 0;
     &-body {
         color: $white;
         img {
@@ -422,80 +432,8 @@
     }
 }
 
-//******Subscribe Section*****//
-.subscribe {
-    background: linear-gradient(to left, rgba(51, 22, 22, 0.7), rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("../images/lady-sings-the-blues.jpg")no-repeat center;
-    height: 200px;
-    width: auto;
-    background-size: cover;
-    h5 {
-        color: $white;
-        text-align: center;
-        margin: -.1rem 0;
-        padding: 2rem 0 0 0;
-        font-size: 1.4rem;
-        span {
-            color: $primary;
-        }
-    }
-    &-search {
-        @include DisplayFlex(row,
-        nowrap);
-        width: 25%;
-        margin: 0 auto;
-        padding: 4rem 0;
-        input {
-            @include inputSearch;
-            padding: 1.6rem;
-        }
-        span {
-            @include searchBtn;
-        }
-    }
-}
-
-///*****Footer******//
-.footer {
-    color: $white;
-    text-align: center;
-    background-color: $gray;
-    margin: -.4rem 0;
-    &-img {
-        padding: .4rem;
-        img {
-            height: 7rem;
-            width: 8rem;
-            border-radius: 50%;
-        }
-    }
-    &>div {
-        margin: .4rem 0;
-    }
-    &-list {
-        ul {
-            display: flex;
-            justify-content: center;
-            li {
-                margin: .4rem 1rem;
-                list-style: none;
-                a {
-                    color: $white;
-                    &:hover {
-                        color: $primary;
-                    }
-                }
-            }
-        }
-    }
-    &-team {
-        i {
-            color: $primary;
-        }
-    }
-}
-
+//********Gallery Section********//
 .gallery {
-    // background: $gray;
     padding: 1rem .5rem;
     overflow: hidden !important;
     h4 {
@@ -515,5 +453,98 @@
     filter: grayscale(10);
     &:hover {
         filter: blur(0px);
+    }
+}
+
+// .contact-pagee {
+//     // margin: 3rem auto;
+//     @include PositionCenter(50%,
+//     50%,
+//     absolute);
+// }
+//******Subscribe Section*****//
+.subscribe {
+    background: linear-gradient(to left, rgba(51, 22, 22, 0.7), rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("../images/lady-sings-the-blues.jpg")no-repeat center;
+    height: 200px;
+    width: auto;
+    background-size: cover;
+    object-fit: cover;
+    h5 {
+        color: $white;
+        text-align: center;
+        margin: -.1rem 0;
+        padding: 2rem 0 0 0;
+        font-size: 1.7rem;
+        span {
+            color: $primary;
+        }
+    }
+    &-search {
+        @include DisplayFlex(row,
+        nowrap);
+        width: 25%;
+        margin: 0 auto;
+        padding: 1rem 0;
+        input {
+            @include inputSearch;
+            padding: 1.6rem;
+        }
+        span {
+            @include searchBtn;
+        }
+    }
+}
+
+//****ERROr Page******//
+.error-page {
+    margin: 1rem auto;
+    text-align: center;
+    @include DisplayFlex(column,
+    nowrap);
+    img {
+        height: 25rem;
+    }
+    &:nth-child(2) {
+        padding: .6rem;
+    }
+}
+
+///*****Footer******//
+.footer {
+    color: $white;
+    text-align: center;
+    background-color: $gray;
+    margin: -.4rem 0;
+    h6 {
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+    &>div {
+        margin: .4rem 0;
+    }
+    a {
+        color: $white;
+        font-weight: 400;
+    }
+    &-list {
+        ul {
+            display: flex;
+            justify-content: center;
+            li {
+                margin: .4rem .5rem;
+                list-style: none;
+                a {
+                    color: $white;
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+    &-team {
+        i {
+            color: $primary;
+        }
     }
 }
