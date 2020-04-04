@@ -17,16 +17,16 @@ const HotRelease: React.FC = () => {
 	// console.log(newMusicList = []);
 	// newMusicList.push({id:1,title:"mike",duration:"dkjskj"})
 
-	newMusicList.push(
-		{ id: 1, title: "new song for the soul", duration: "4:52" },
-		{ id: 2, title: "new song for the soul", duration: "4:52" },
-		{ id: 3, title: "new song for the soul", duration: "4:52" },
-		{ id: 4, title: "new song for the soul", duration: "4:52" },
-		{ id: 5, title: "new song for the soul", duration: "4:52" },
-		{ id: 6, title: "new song for the soul", duration: "4:52" },
-		{ id: 7, title: "new song for the soul", duration: "4:52" },
-		{ id: 8, title: "new song for the soul", duration: "4:52" }
-	);
+	// newMusicList.push(
+	// 	{ id: 1, title: "new song for the soul", duration: "4:52" },
+	// 	{ id: 2, title: "new song for the soul", duration: "4:52" },
+	// 	{ id: 3, title: "new song for the soul", duration: "4:52" },
+	// 	{ id: 4, title: "new song for the soul", duration: "4:52" },
+	// 	{ id: 5, title: "new song for the soul", duration: "4:52" },
+	// 	{ id: 6, title: "new song for the soul", duration: "4:52" },
+	// 	{ id: 7, title: "new song for the soul", duration: "4:52" },
+	// 	{ id: 8, title: "new song for the soul", duration: "4:52" }
+	// );
 	// newMusicList =[
 	// 	{ id: 1, title: "new song for the soul", duration: "4:52" },
 	// 	{ id: 2, title: "new song for the soul", duration: "4:52" },

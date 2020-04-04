@@ -6,13 +6,15 @@ import google from "../../../images/google.png";
 
 interface Props {
 	frameborder?: string;
+	
 }
 
 const SectionA: React.FC<Props> = () => {
 	return (
-		<div className="sectionA">
+		<div className="sectionA" id="sectionA">
 			<div className="sectionA-video">
 				<iframe
+				title="introduction"
 					width="560"
 					height="315"
 					src="https://www.youtube.com/embed/ae2iX6vZCoM"
