@@ -4,6 +4,7 @@ interface props {
 	title: string;
 	text: string;
 	img: string;
+	id?:number;
 }
 
 const EventList: React.FC<props> = ({ title, img, text}) => {
