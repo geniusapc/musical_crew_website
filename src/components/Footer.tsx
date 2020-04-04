@@ -1,24 +1,43 @@
 import React from "react";
-import footerImg from '../images/Soft_soundz.png'
+import Facebook from "@material-ui/icons/Facebook";
+import Twitter from "@material-ui/icons/Twitter";
+import LinkedIn from "@material-ui/icons/LinkedIn";
+
 
 const Footer: React.FC = () => {
-	return <footer className="footer">
-        <div className="footer-img">
-            <img src={footerImg} alt="footer logo"/>
-        </div>
-        <div className="footer-list">
-            <ul>
-                <li><a href="www.fdhvf.com">Ssrvices</a></li>
-                <li><a href="www.fdhvf.com">Ssrvices</a></li>
-                <li><a href="www.fdhvf.com">Ssrvices</a></li>
-               
-            </ul>
-        </div>
-        <div className="footer-team">
-            <blockquote>powered by cmcWebCode <i>FrontEnd</i></blockquote> & PrinceArthur <i>Backend</i> 
-        </div>
-        <cite>Soft Soundz Team &copy; 2020 || All Right reserved</cite>
-    </footer>
+    const DATE = new Date();
+    const getYear = DATE.getFullYear()
+	return (
+		<footer className="footer">
+			<h6>GET IN TOUCH</h6>
+			<div className="footer-list">
+				<ul>
+					<li>
+						<a href="www.fdhvf.com">
+							<Facebook />
+						</a>
+					</li>
+					<li>
+						<a href="www.fdhvf.com">
+							<Twitter />
+						</a>
+					</li>
+					<li>
+						<a href="www.fdhvf.com">
+							<LinkedIn />
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div className="footer-team">
+				<blockquote>
+					Developed by <a href="www.vdjhjvdfv.com">@cmcWebCode</a>  <i>FrontEnd</i> &<a href="www.vdjhjvdfv.com">@PrinceArthur</a>  <i>Backend</i>
+				</blockquote>{" "}
+				
+			</div>
+			<cite>Soft Soundz Team &copy; {getYear} || All Right reserved</cite>
+		</footer>
+	);
 };
 
 export default Footer;

@@ -5,8 +5,8 @@ import NavItem from "./NavItem";
 const NavItems: React.FC= () => {
 	return (
 		<>
-			<NavItem link={"wwww.test.com"} text={"Home"} />
-			<NavItem link={"wwww.test.com"} text={"About"} />
+			<NavItem link={"#about"} text={"ABOUT"}  />
+			<NavItem link={"#sectionA"} text={"DOWNLOADS"} />
 			{/* <NavItem link={"wwww.test.com"} text={"Downloads"} /> */}
 		</>
 	);

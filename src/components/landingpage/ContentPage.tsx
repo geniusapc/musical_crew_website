@@ -1,5 +1,6 @@
 import React from "react";
 import imageBg from '../../images/maninblack.jpg'
+import ArrowRight from '@material-ui/icons/ArrowRight';
 
 interface Props {
    
@@ -19,8 +20,8 @@ const ContentPage: React.FC<Props> = () => {
 					distinctio.
 				</p>
 
-				<a href="www.tede.com" className="btn">
-					LEARN MORE
+				<a href="#about" className="btn">
+					LEARN MORE <ArrowRight />
 				</a>
 			</div>
             <div className="content-image">

@@ -11,30 +11,15 @@ import Paper from "@material-ui/core/Paper";
 import Popper from "@material-ui/core/Popper";
 import MenuItem from "@material-ui/core/MenuItem";
 import MenuList from "@material-ui/core/MenuList";
-import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 
-const useStyles = makeStyles((theme: Theme) =>
-	createStyles({
-		root: {
-			display: "flex"
-		},
-		paper: {
-			marginRight: theme.spacing(2)
-		}
-	})
-);
 
 interface Props {
-	// displaySearch:Boolean;
-	// openedSearchBox:
-	// onclick: () => void;
-	// DetailedHTMLProps<HTMLAttributes><HTMLDivElement> :() => void;
+	
 }
 
 const Header: React.FC<Props> = () => {
 	const [displaySearch, setDisplaySearch] = useState(true);
 	const openedSearchBox = () => setDisplaySearch(!displaySearch);
-	const classes = useStyles();
 	const [open, setOpen] = React.useState(false);
 	const anchorRef = React.useRef<HTMLButtonElement>(null);
 
@@ -80,9 +65,9 @@ const Header: React.FC<Props> = () => {
 				<NavItems />
 				<span
 					style={{
-						margin: "-.5rem  0 0 0",
+						margin: "-.2rem  0 0 0",
 						color: "white",
-						// background: "#d50000"
+						
 					}}>
 					<Button
 						color="inherit"
@@ -111,11 +96,21 @@ const Header: React.FC<Props> = () => {
 											autoFocusItem={open}
 											id="menu-list-grow"
 											onKeyDown={handleListKeyDown}>
-											<Link to="/login">
-												<MenuItem onClick={handleClose}>Profilecacjhjsahj</MenuItem>
+											<Link className="red" to="/login">
+												<MenuItem 
+												 color="primary"
+												 onClick={handleClose}>LOGIN</MenuItem>
 											</Link>
-											<MenuItem onClick={handleClose}>My accountasjkcjksc</MenuItem>
-											<MenuItem onClick={handleClose}>Logouskjackajsckt</MenuItem>
+											<Link className="red" to="/create-account">
+												<MenuItem 
+												 color="primary"
+												 onClick={handleClose}>REGISTER</MenuItem>
+											</Link>
+											<Link className="red"  to="/contact-us">
+												<MenuItem 
+												 color="primary"
+												 onClick={handleClose}>CONTACT US</MenuItem>
+											</Link>
 										</MenuList>
 									</ClickAwayListener>
 								</Paper>
