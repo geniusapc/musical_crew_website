@@ -1,7 +1,6 @@
-import React,{useState} from "react";
+import React from "react";
 import Layouts from "./layouts/Layouts";
-import { BrowserRouter as Router } from "react-router-dom";
-import AdminLayouts from './layouts/AdminLayouts';
+
 import "./sass/main.scss";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 
@@ -17,18 +16,13 @@ const theme = createMuiTheme({
 });
 
 const App: React.FC = () => {
-	const [userInterface,setUserInterface] =useState<any>(false)
-	const changeinterface =()=>setUserInterface(!userInterface);
+
 	return (
 		<ThemeProvider theme={theme}>
-			<Router>
 			<div>
-				<Layouts close={userInterface} />
+				<Layouts  />
 			</div>
-			<div>
-				<AdminLayouts setUserInterface={changeinterface} close={userInterface}/>
-			</div>
-			</Router>
+			
 		</ThemeProvider>
 	);
 };

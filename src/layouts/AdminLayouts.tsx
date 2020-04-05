@@ -20,7 +20,7 @@ const AdminLayouts: React.FC<Props> = ({ close, setUserInterface }) => {
 			style={{
 				display: close ? "none" : "block",
 			}}>
-			<Route exact path="/admin" component={AdminDashboard} />
+			{/* <Route exact path="/admin" component={AdminDashboard} /> */}
 		</div>
 	);
 };

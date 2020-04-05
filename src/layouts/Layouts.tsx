@@ -9,6 +9,7 @@ import ViewEvents from "../pages/ViewEvent";
 import ContactPage from "../pages/ContactPage";
 import ErrorPage from "../pages/ErrorPage";
 import AdminDashboard from "../admin-dashboard/AdminPage";
+import AdminGallery from '../admin-dashboard/admin-actions/Gallery';
 
 import {
 	BrowserRouter as Router,
@@ -63,6 +64,7 @@ const Layouts: React.FC<RouteProps> = ({close}) => {
 				<Route exact path="/contact-us" component={ContactPage} />
 				<Route exact path="/page-not-found" component={ErrorPage} />
 				<Route exact path="/admin" component={AdminDashboard} />
+				<Route exact path="/admin/galleries" component={AdminGallery} />
 				<Redirect to="/page-not-found" />
 			</Switch>
 			<Footer />
