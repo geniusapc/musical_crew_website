@@ -1,5 +1,6 @@
 import React from "react";
 import clsx from "clsx";
+import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import Button from "@material-ui/core/Button";
@@ -11,7 +12,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
 import MenuIcon from "@material-ui/icons/Menu";
-import AdminViews from './AdminViews';
+import AdminViews from "./AdminViews";
 
 interface Props {
 	close: boolean;
@@ -35,7 +36,7 @@ const AdminPage: React.FC<Props> = () => {
 	const toggleDrawer = (anchor: Anchor, open: boolean) => (
 		event: React.KeyboardEvent | React.MouseEvent
 	) => {
-        setState(!state);
+		setState(!state);
 		// if (
 		// 	event &&
 		// 	event.type === "keydown" &&
@@ -51,12 +52,12 @@ const AdminPage: React.FC<Props> = () => {
 	const list = (anchor: Anchor) => (
 		<div
 			className={clsx(classes.list, {
-				[classes.fullList]: anchor === "left" 
+				[classes.fullList]: anchor === "left",
 			})}
 			role="presentation"
 			onClick={toggleDrawer(anchor, false)}
 			onKeyDown={toggleDrawer(anchor, false)}>
-			<List>
+			{/* <List>
 				{["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
 					<ListItem button key={text}>
 						<ListItemIcon>
@@ -65,9 +66,14 @@ const AdminPage: React.FC<Props> = () => {
 						<ListItemText primary={text} />
 					</ListItem>
 				))}
-			</List>
+			</List> */}
+			<ul>
+				<Link to="admin/galleries">
+					<li>Galleryxkcsjxkajskxjksaxjk</li>
+				</Link>
+			</ul>
 			<Divider />
-			<List>
+			{/* <List>
 				{["All mail", "Trash", "Spam"].map((text, index) => (
 					<ListItem button key={text}>
 						<ListItemIcon>
@@ -76,13 +82,12 @@ const AdminPage: React.FC<Props> = () => {
 						<ListItemText primary={text} />
 					</ListItem>
 				))}
-			</List>
+			</List> */}
 		</div>
 	);
-	
 
 	return (
-		<div style={{ background: "white", height: "100vh" }}>
+		<div style={{ background: "white", color: "black" }}>
 			<div key={"left"}>
 				<Button onClick={toggleDrawer("left", true)}>
 					<MenuIcon color="primary" fontSize="large" />
@@ -95,9 +100,8 @@ const AdminPage: React.FC<Props> = () => {
 					{list("left")}
 				</SwipeableDrawer>
 			</div>
-            <div>
-<AdminViews/>
-            </div>
+
+			<AdminViews />
 		</div>
 	);
 };
