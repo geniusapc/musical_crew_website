@@ -1,5 +1,7 @@
 import React from "react";
 import MusicList from "./charts/MusicList";
+import Events from "./charts/Events";
+import Users from "./charts/Users";
 
 interface Props {}
 
@@ -10,13 +12,13 @@ const AdminViews: React.FC<Props> = () => {
 				<MusicList />
 			</div>
 			<div>
-				<MusicList />
+			<MusicList />
 			</div>
 			<div>
-				<MusicList />
+			<Events />	
 			</div>
 			<div>
-				<MusicList />
+				<Users />
 			</div>
 			<div>
 				<MusicList />
