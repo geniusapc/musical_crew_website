@@ -21,7 +21,7 @@ import {
 // import { CollapseSideBar, ToogleSideBar } from "../redux-store/actions/Toogle";
 
 interface RouteProps {
-	close?:any;
+	close?: any;
 	// path?: string | string[];
 	// exact?: boolean;
 	// sensitive?: boolean;
@@ -33,41 +33,27 @@ interface RouteProps {
 // 	Toggle: Boolean;
 // }
 
-const Layouts: React.FC<RouteProps> = ({close}) => {
-	// const useTypedSelector: TypedUseSelectorHook<RootState> = useSelector;
-	// let Toggle = useTypedSelector(state => state.Toggle);
-	// const dispatch = useDispatch();
-	// // const toggleNavBar = () =>
-	// // 	(Toggle = false ? dispatch(CollapseSideBar()) : true);
-	// const toggleNavBar = () =>{
-	// 	//  (dispatch(CollapseSideBar()));
-	// 	if (Toggle = false) {
-	// 		dispatch(ToogleSideBar())
-	// 		// Toggle =false;
-	// 		// console.log(Toggle);
+const Layouts: React.FC<RouteProps> = () => {
 
-	// 	} else {
-	// 		return;;
-	// 	}
-	// }
+
 	return (
-	
+
 		<div >
 			<Router>
-			<Header />
-			<Switch>
-				<Route exact path="/" component={Home} />
-				<Route exact path="/our-galleries" component={Galleries} />
-				<Route exact path="/login" component={Login} />
-				<Route exact path="/create-account" component={Register} />
-				<Route exact path="/events" component={ViewEvents} />
-				<Route exact path="/contact-us" component={ContactPage} />
-				<Route exact path="/page-not-found" component={ErrorPage} />
-				<Route exact path="/admin" component={AdminDashboard} />
-				<Route exact path="/admin/galleries" component={AdminGallery} />
-				<Redirect to="/page-not-found" />
-			</Switch>
-			<Footer />
+				<Header />
+				<Switch>
+					<Route exact path="/" component={Home} />
+					<Route exact path="/our-galleries" component={Galleries} />
+					<Route exact path="/login" component={Login} />
+					<Route exact path="/create-account" component={Register} />
+					<Route exact path="/events" component={ViewEvents} />
+					<Route exact path="/contact-us" component={ContactPage} />
+					<Route exact path="/page-not-found" component={ErrorPage} />
+					<Route exact path="/admin" component={AdminDashboard} />
+					<Route exact path="/admin/galleries" component={AdminGallery} />
+					<Redirect to="/page-not-found" />
+				</Switch>
+				<Footer />
 			</Router>
 		</div>
 

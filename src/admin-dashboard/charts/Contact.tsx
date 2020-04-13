@@ -1,14 +1,9 @@
-import React from 'react'
+import React from "react";
 
-interface Props {
+interface Props {}
 
-}
-
-const ContactsMessages : React.FC<Props> = () => {
-        return (
-            <div>sadjkchbkdsjc</div>
-        );
-}
-
+const ContactsMessages: React.FC<Props> = () => {
+	return <div>sadjkchbkdsjc</div>;
+};
 
 export default ContactsMessages;

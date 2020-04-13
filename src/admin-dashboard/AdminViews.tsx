@@ -12,10 +12,10 @@ const AdminViews: React.FC<Props> = () => {
 				<MusicList />
 			</div>
 			<div>
-			<MusicList />
+				<MusicList />
 			</div>
 			<div>
-			<Events />	
+				<Events />
 			</div>
 			<div>
 				<Users />
