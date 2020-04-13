@@ -7,6 +7,7 @@ interface Props {
 	setUserInterface: () => void;
 }
 
+
 const AdminLayouts: React.FC<Props> = ({ close, setUserInterface }) => {
 	useEffect(() => {
         if (!close) {
