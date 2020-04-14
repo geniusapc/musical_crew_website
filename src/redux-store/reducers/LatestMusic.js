@@ -1,4 +1,4 @@
-const MusicListReducer = (
+export const MusicListReducer = (
     state = [
         { id: 1, title: "new song for the soul", duration: "4:52" },
         { id: 2, title: "new song for the soul", duration: "4:52" },
@@ -21,4 +21,25 @@ const MusicListReducer = (
     }
 };
 
-export default MusicListReducer;
+export const EventState = (Events = [
+    {
+        id: 1,
+        title: "NewUpdate",
+        img: "https://source.unsplash.com/random",
+        text: `lorem30cdscbjhdscjhsbdjhcbjshdcbjshdbcjhsdbjhcbsjhdbcsbdjhcbjshdcbjshdbcjhsdbjhcbsjhdbcsbdjhcbjshdcbjshdbcjhsdbjhcbsjhdbcsbdjhcbjshdcbjshdbcjhsdbjhcbsjhdbcsbdjhcbjshdcbjshdbcjhsdbjhcbsjhdbcsbdjhcbjshdcbjshdbcjhsdbjhcbsjhdbcjshbdcbjsdbsdbjjhvjdschvjvsdcjsvdjchvjdshv`
+    },
+    {
+        id: 2,
+        title: "Music concert",
+        img: "https://source.unsplash.com/random",
+        text: `lorem30cdscbjhdscjhsbdjhcbjshdcbjshdbcjhsdbjhcbsjhdbcsbdjhcbjshdcbjshdbcjhsdbjhcbsjhdbcsbdjhcbjshdcbjshdbcjhsdbjhcbsjhdbcsbdjhcbjshdcbjshdbcjhsdbjhcbsjhdbcsbdjhcbjshdcbjshdbcjhsdbjhcbsjhdbcsbdjhcbjshdcbjshdbcjhsdbjhcbsjhdbcjshbdcbjsdbsdbjjhvjdschvjvsdcjsvdjchvjdshv`
+    },
+    {
+        id: 3,
+        title: "vacation with teams",
+        img: "https://source.unsplash.com/random",
+        text: `lorem30cdscbjhdscjhsbdjhcbjshdcbjshdbcjhsdbjhcbsjhdbcsbdjhcbjshdcbjshdbcjhsdbjhcbsjhdbcsbdjhcbjshdcbjshdbcjhsdbjhcbsjhdbcsbdjhcbjshdcbjshdbcjhsdbjhcbsjhdbcsbdjhcbjshdcbjshdbcjhsdbjhcbsjhdbcsbdjhcbjshdcbjshdbcjhsdbjhcbsjhdbcjshbdcbjsdbsdbjjhvjdschvjvsdcjsvdjchvjdshv`
+    }
+]) => {
+    return Events;
+};

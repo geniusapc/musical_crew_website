@@ -109,18 +109,14 @@ const Gallery: React.FC = () => {
 					);
 				})}
 			</List>
-
-			{/* <div
-				className="admin-views-form"
-				style={{ color: "black", display: opened ? "block" : "none" }}> */}
-				<div className={opened ?"admin-views-form":"open"} >>
+			<div className={opened ? "admin-views-form" : "open"} >>
 				<form>
 					<span className="collapse" onClick={() => setIsOpened(false)}>
 						<Close color="primary" />
 					</span>
 					<div>
 						<label htmlFor="title">Title</label>
-						<input type="text" />
+						<input type="text" placeholder="gallery title" />
 					</div>
 					<div>
 						<label htmlFor="Image">Gallery</label>
@@ -131,7 +127,7 @@ const Gallery: React.FC = () => {
 					</div>
 					<div>
 						<label htmlFor="text">Text</label>
-						<textarea name="text" rows={10}></textarea>
+						<textarea name="text" rows={10} placeholder="type gallery text here"></textarea>
 					</div>
 					<div>
 						<input type="submit" className="btn" value="SEND" />

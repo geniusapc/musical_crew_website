@@ -3,12 +3,13 @@ import imageBg from '../../images/maninblack.jpg'
 import ArrowRight from '@material-ui/icons/ArrowRight';
 
 interface Props {
-   
+
 }
 
 const ContentPage: React.FC<Props> = () => {
+
 	return (
-		<div className="content">
+		<div className="content" >
 			<div>
 				<h1>
 					Peace of Mind to <br /> Communicate Freely
@@ -24,9 +25,9 @@ const ContentPage: React.FC<Props> = () => {
 					LEARN MORE <ArrowRight />
 				</a>
 			</div>
-            <div className="content-image">
-                <img src={imageBg} alt="Landing "/>
-            </div>
+			<div className="content-image">
+				<img src={imageBg} alt="Landing " />
+			</div>
 		</div>
 	);
 };
