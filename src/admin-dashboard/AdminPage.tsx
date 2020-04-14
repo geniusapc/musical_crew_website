@@ -4,13 +4,7 @@ import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import Button from "@material-ui/core/Button";
-// import List from "@material-ui/core/List";
 import Divider from "@material-ui/core/Divider";
-// import ListItem from "@material-ui/core/ListItem";
-// import ListItemIcon from "@material-ui/core/ListItemIcon";
-// import ListItemText from "@material-ui/core/ListItemText";
-// import InboxIcon from "@material-ui/icons/MoveToInbox";
-// import MailIcon from "@material-ui/icons/Mail";
 import MenuIcon from "@material-ui/icons/Menu";
 import AdminViews from "./AdminViews";
 
@@ -23,7 +17,7 @@ const useStyles = makeStyles({
 		width: 250,
 	},
 	fullList: {
-		width: "auto",
+		width: "200%",
 	},
 });
 
@@ -37,16 +31,6 @@ const AdminPage: React.FC<Props> = () => {
 		event: React.KeyboardEvent | React.MouseEvent
 	) => {
 		setState(!state);
-		// if (
-		// 	event &&
-		// 	event.type === "keydown" &&
-		// 	((event as React.KeyboardEvent).key === "Tab" ||
-		// 		(event as React.KeyboardEvent).key === "Shift")
-		// ) {
-		// 	return;
-		// }
-
-		// setState(anchor===open);
 	};
 
 	const list = (anchor: Anchor) => (
@@ -57,38 +41,40 @@ const AdminPage: React.FC<Props> = () => {
 			role="presentation"
 			onClick={toggleDrawer(anchor, false)}
 			onKeyDown={toggleDrawer(anchor, false)}>
-			{/* <List>
-				{["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-					<ListItem button key={text}>
-						<ListItemIcon>
-							{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-						</ListItemIcon>
-						<ListItemText primary={text} />
-					</ListItem>
-				))}
-			</List> */}
-			<ul>
-				<Link to="admin/galleries">
-					<li>Galleryxkcsjxkajskxjksaxjk</li>
+			<ul className='admin-nav'>
+				<Link className='admin-nav-list' to="admin/galleries">
+					<li>All Music Posts</li>
 				</Link>
+				<Divider />
+				<Link className='admin-nav-list' to="admin/galleries">
+					<li>About Page</li>
+				</Link>
+				<Divider />
+				<Link className='admin-nav-list' to="admin/galleries">
+					<li>Events</li>
+				</Link>
+				<Divider />
+				<Link className='admin-nav-list' to="admin/galleries">
+					<li>Users Portal</li>
+				</Link>
+				<Divider />
+				<Link className='admin-nav-list' to="admin/galleries">
+					<li>Subscribers</li>
+				</Link>
+				<Divider />
+				<Link className='admin-nav-list' to="admin/galleries">
+					<li>Gallery</li>
+				</Link>
+				<Divider />
 			</ul>
-			<Divider />
-			{/* <List>
-				{["All mail", "Trash", "Spam"].map((text, index) => (
-					<ListItem button key={text}>
-						<ListItemIcon>
-							{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-						</ListItemIcon>
-						<ListItemText primary={text} />
-					</ListItem>
-				))}
-			</List> */}
+		
+
 		</div>
 	);
 
 	return (
-		<div style={{ background: "white", color: "black" }}>
-			<div key={"left"}>
+		<div className="admin" style={{ background: "white", color: "black" }}>
+			<div key={"left"} className="menu-btn" >
 				<Button onClick={toggleDrawer("left", true)}>
 					<MenuIcon color="primary" fontSize="large" />
 				</Button>
