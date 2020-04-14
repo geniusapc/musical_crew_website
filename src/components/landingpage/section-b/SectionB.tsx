@@ -5,12 +5,12 @@ interface Props {
 
 }
 
-const SectionB : React.FC<Props> = () => {
-        return (
-            <>
-            <Events/>
-            </>
-        );
+const SectionB: React.FC<Props> = () => {
+  return (
+    <div id="events">
+      <Events />
+    </div>
+  );
 }
 
 

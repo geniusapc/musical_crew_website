@@ -1,28 +1,41 @@
 import React, { useState } from "react";
+import { useDispatch, useSelector, TypedUseSelectorHook } from 'react-redux';
 import EventList from "./EventList";
 
-interface Props {}
+interface Props { }
+interface RootState {
+	EventState: Array<{
+		id: number;
+		title: string;
+		img: string;
+		text: string;
+	}>;
+}
 
 const Event: React.FC<Props> = () => {
-	const [event] = useState([
+	// let useTypedSelector: TypedUseSelectorHook<RootState> = useSelector;
+	// const events = useTypedSelector(state => state.EventState);
+	// console.log(events);
+	
+	const [events] = useState([
 		{
 			id: 1,
-			title: "New Update",
+			title: "NewUpdate",
 			img: "https://source.unsplash.com/random",
 			text: `lorem30cdscbjhdscjhsbdjhcbjshdcbjshdbcjhsdbjhcbsjhdbcsbdjhcbjshdcbjshdbcjhsdbjhcbsjhdbcsbdjhcbjshdcbjshdbcjhsdbjhcbsjhdbcsbdjhcbjshdcbjshdbcjhsdbjhcbsjhdbcsbdjhcbjshdcbjshdbcjhsdbjhcbsjhdbcsbdjhcbjshdcbjshdbcjhsdbjhcbsjhdbcjshbdcbjsdbsdbjjhvjdschvjvsdcjsvdjchvjdshv`
-		},
-		{
+	},
+	{
 			id: 2,
-			title: "New Update",
+			title: "Music concert",
 			img: "https://source.unsplash.com/random",
 			text: `lorem30cdscbjhdscjhsbdjhcbjshdcbjshdbcjhsdbjhcbsjhdbcsbdjhcbjshdcbjshdbcjhsdbjhcbsjhdbcsbdjhcbjshdcbjshdbcjhsdbjhcbsjhdbcsbdjhcbjshdcbjshdbcjhsdbjhcbsjhdbcsbdjhcbjshdcbjshdbcjhsdbjhcbsjhdbcsbdjhcbjshdcbjshdbcjhsdbjhcbsjhdbcjshbdcbjsdbsdbjjhvjdschvjvsdcjsvdjchvjdshv`
-		},
-		{
+	},
+	{
 			id: 3,
-			title: "New Update",
+			title: "vacation with teams",
 			img: "https://source.unsplash.com/random",
 			text: `lorem30cdscbjhdscjhsbdjhcbjshdcbjshdbcjhsdbjhcbsjhdbcsbdjhcbjshdcbjshdbcjhsdbjhcbsjhdbcsbdjhcbjshdcbjshdbcjhsdbjhcbsjhdbcsbdjhcbjshdcbjshdbcjhsdbjhcbsjhdbcsbdjhcbjshdcbjshdbcjhsdbjhcbsjhdbcsbdjhcbjshdcbjshdbcjhsdbjhcbsjhdbcjshbdcbjsdbsdbjjhvjdschvjvsdcjsvdjchvjdshv`
-		}
+	}
 	]);
 	return (
 		<>
@@ -30,9 +43,9 @@ const Event: React.FC<Props> = () => {
 				OUR <span>MUSIC</span> EVENT
 			</h4>
 			<div className="cardGrid">
-				{event.map(env => (
-					<div key={env.id}>
-						<EventList title={env.title} text={env.text} img={env.img} />
+				{events.map(event => (
+					<div key={event.id}>
+						<EventList title={event.title} text={event.text} img={event.img} />
 					</div>
 				))}
 			</div>
