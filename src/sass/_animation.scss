@@ -5,7 +5,7 @@ About Page styling is here because it has lots of animation styles
 */
 
 .about-wrapper {
-    margin: 0 auto -2.8rem auto;
+    margin: 2rem  auto -2.8rem auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -87,10 +87,10 @@ About Page styling is here because it has lots of animation styles
 
 .about-emphasis {
     position: relative;
-    height: 20rem;
+    height: 22rem;
     width: 37rem;
-    left: 25%;
-    top: -1%;
+    left: 20%;
+    top: -3%;
 
     .image-slider {
         margin: 0 6rem ;
@@ -112,39 +112,7 @@ About Page styling is here because it has lots of animation styles
     .btn-slide1 {
         margin: 0  7rem 0 0 ;
     }
-    .btn-slide2 {
-    //    margin-right: -1rem ;
-    }
 
-    // span {
-    //     font-style: italic;
-    //     text-align: center;
-    //     color: $white;
-    //     position: absolute;
-    //     top: 60%;
-    //     left: 20%;
-    // }
-    // &-text {
-    //     h4 {
-    //         position: absolute;
-    //         color: $white;
-    //         left: 40%;
-    //         margin: 0 auto;
-    //         transform: translate(-20%, 10%);
-    //         letter-spacing: .4rem;
-    //         font-size: 8rem;
-    //         &:nth-child(1) {
-    //             color: transparent;
-    //             -webkit-text-stroke: 2px $primary;
-    //         }
-    //         &:nth-child(2) {
-    //             color: $primary;
-    //             -webkit-text-stroke: 2px $primary;
-    //             animation: animateword 4s ease-in-out infinite;
-    //             transition: all 1s linear;
-    //         }
-    //     }
-    // }
 }
 
 @keyframes animateword {

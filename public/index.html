@@ -1,39 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Soft soundz Music Zone"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Soft soundz Music Zone" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png"/>
+  <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="./skeleton.css">
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+    integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+    crossorigin="anonymous" />
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" /></noscript>
+  <link rel="preload" href="https://www.youtube.com/embed/ae2iX6vZCoM" as="document">
+  <title>Soft Soundz Music</title>
+  <style>
+    header,
+    .div {
+      background-color: #CFD8DC;
+      padding: 1em;
+      font-size: 2.5rem;
+      color: #FFF;
+    }
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>Soft Soundz Music</title>
-  </head>
-  <body>
-    <div id="root">
-      <header>
-      </header>
-      <section>
+    header,
+    .div,
+    section {
+      -webkit-animation: fade 1.5s infinite;
+      animation: fade 1.5s infinite;
+    }
+
+    section {
+      margin: 3em auto;
+      width: 70%;
+    }
+
+    .row {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      height: 5em;
+      margin-bottom: 1em;
+    }
+
+    .two-parts {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+    }
+
+    .part {
+      width: 40%;
+    }
+
+    /* .circle {
+  background-color: #CFD8DC;
+  width: 4em;
+  height: 4em;
+} */
+    .lines {
+      width: 100%;
+      height: 100%;
+    }
+
+    .part .lines {
+      width: 80% !important;
+    }
+
+    .line {
+      background-color: #CFD8DC;
+      height: 2em;
+      margin-bottom: 1em;
+    }
+
+    .skeleton-button {
+      width: 45%;
+      height: 4em;
+      background-color: #CFD8DC;
+      border: none;
+    }
+
+    .skeleton-button:nth-child(2) {
+      float: right;
+    }
+
+    @-webkit-keyframes fade {
+      0% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fade {
+      0% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root">
+    <header>
+    </header>
+    <section>
+      <div class="row">
+        <div class="circle">
+        </div>
+        <div class="lines">
+          <div class="line">
+          </div>
+          <div class="line">
+          </div>
+        </div>
+      </div>
+      <div class="line">
+      </div>
+      <div class="line">
+      </div>
+    </section>
+
+    <section class="two-parts">
+      <div class="part">
         <div class="row">
           <div class="circle">
           </div>
@@ -48,43 +166,8 @@
         </div>
         <div class="line">
         </div>
-      </section>
-      
-      <section class="two-parts">
-        <div class="part">
-          <div class="row">
-            <div class="circle">
-            </div>
-            <div class="lines">
-              <div class="line">
-              </div>
-              <div class="line">
-              </div>
-            </div>
-          </div>
-          <div class="line">
-          </div>
-          <div class="line">
-          </div>
-        </div>
-        <div class="part">
-          <div class="row">
-          <div class="circle">
-          </div>
-          <div class="lines">
-            <div class="line">
-            </div>
-            <div class="line">
-            </div>
-          </div>
-        </div>
-        <div class="line">
-        </div>
-        <div class="line">
-        </div>
-        </div>
-      </section>
-      <section>
+      </div>
+      <div class="part">
         <div class="row">
           <div class="circle">
           </div>
@@ -99,16 +182,33 @@
         </div>
         <div class="line">
         </div>
-      </section>
-      <section class="buttons">
-        <button class="skeleton-button">
-        </button>
-        <button class="skeleton-button">
-        </button>
-      </section>
-     <div class="div"></div>
-    </div>
-    <!--
+      </div>
+    </section>
+    <section>
+      <div class="row">
+        <div class="circle">
+        </div>
+        <div class="lines">
+          <div class="line">
+          </div>
+          <div class="line">
+          </div>
+        </div>
+      </div>
+      <div class="line">
+      </div>
+      <div class="line">
+      </div>
+    </section>
+    <section class="buttons">
+      <button class="skeleton-button">
+      </button>
+      <button class="skeleton-button">
+      </button>
+    </section>
+    <div class="div"></div>
+  </div>
+  <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -118,5 +218,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
+</body>
+
 </html>

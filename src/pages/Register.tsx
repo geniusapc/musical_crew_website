@@ -2,9 +2,9 @@ import React from "react";
 import ladyMusic from "../images/maninblack.jpg";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import Lock from "@material-ui/icons/Lock";
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-interface Props {}
+interface Props { }
 
 const Register: React.FC<Props> = () => {
 	return (
@@ -18,29 +18,32 @@ const Register: React.FC<Props> = () => {
 					<span className="icon">
 						<AccountCircle />
 					</span>
-					<input type="text" placeholder="email" required />
+					<label htmlFor="email">
+						<input type="text" placeholder="email" required />
+					</label>
 				</div>
 				<div>
 					<span className="icon">
 						<Lock />
 					</span>
-					<input type="text" placeholder="password" required/>
+					<label htmlFor="password">
+						<input type="text" placeholder="password" required />
+					</label>
 				</div>
 				<div>
 					<span className="icon">
 						<Lock />
 					</span>
-					<input type="text" placeholder="confirm password" required/>
+					<label htmlFor="confirmPassword">
+					<input type="text" placeholder="confirm password" required />
+					</label>
 				</div>
 				<div>
 					<input type="submit" className="btn" value="SIGNUP" />
 				</div>
 				<div>
 					<span>
-						Forgot password <a href="www.cdsjvsd.com">Click Here</a>
-					</span> <br/>
-					<span>
-						Have an account ?<Link to="/login">Login Here</Link>
+						Have an account ?<Link to="/login">Login your account here</Link>
 					</span>
 				</div>
 			</form>

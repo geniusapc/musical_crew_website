@@ -1,8 +1,7 @@
 import React from "react";
 import HotRelease from "./HotRelease";
-import spotify from "../../../images/spotify.png";
-import apple from "../../../images/apple.png";
-import google from "../../../images/google.png";
+// import spotify from "../../../images/spotify.png";
+
 
 interface Props {
 	frameborder?: string;
@@ -26,11 +25,11 @@ const SectionA: React.FC<Props> = () => {
 				</h3>
 				<p>Best the first to hear our newest release</p>
 				<HotRelease />
-				<div>
+				{/* <div>
 					<img src={spotify} alt="spotify" />
-					<img src={google} alt="google" />
-					<img src={apple} alt="apple" />
-				</div>
+					<img src={spotify} alt="google" />
+					<img src={spotify} alt="apple" />
+				</div> */}
 			</div>
 		</div>
 	);

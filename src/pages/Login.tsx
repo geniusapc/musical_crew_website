@@ -18,23 +18,27 @@ const Login: React.FC<Props> = () => {
 					<span className="icon">
 						<AccountCircle />
 					</span>
+					<label htmlFor="email">
 					<input type="text" placeholder="email" required />
+					</label>
 				</div>
 				<div>
 					<span className="icon">
 						<Lock />
 					</span>
+					<label htmlFor="password">
 					<input type="text" placeholder="password" required/>
+					</label>
 				</div>
 				<div>
 					<input type="submit" value="LOGIN" className="btn" />
 				</div>
 				<div>
 					<span>
-						Forgot password <a href="www.cdsjvsd.com">Click Here</a>
+						Forgot password <a href="www.cdsjvsd.com">Get a new password</a>
 					</span><br/>
 					<span>
-					Don't Have an account? <Link to="/create-account">Signup here</Link>
+					Don't Have an account? <Link to="/create-account">Signup an account here</Link>
 					</span>
 				</div>
 			</form>

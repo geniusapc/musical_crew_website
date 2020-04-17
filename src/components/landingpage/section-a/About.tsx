@@ -1,14 +1,10 @@
 import React from "react";
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
-import imageSlide1 from '../../../images/slide1.jpg';
-import imageSlide2 from '../../../images/slide2.jpg';
-import imageSlide3 from '../../../images/slide3.jpg';
 import imageSlide4 from '../../../images/slide4.jpg';
 import imageSlide5 from '../../../images/slide5.jpg';
 import imageSlide6 from '../../../images/slide6.jpg';
-import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+
 
 interface Props {
 	target: boolean;
@@ -46,12 +42,12 @@ const About: React.FC<Props> = ({ target, targetDiv }) => {
 					totalSlides={6}
 				>
 					<Slider>
-						<Slide index={0}> <img className="image-slider" src={imageSlide1} height="300" width="500" alt="man in black" /> </Slide>
-						<Slide index={1}><img className="image-slider" src={imageSlide2} height="300" width="500" alt="man in black" /></Slide>
-						<Slide index={2}><img className="image-slider" src={imageSlide3} height="300" width="500" alt="man in black" /></Slide>
-						<Slide index={3}> <img className="image-slider" src={imageSlide4} height="300" width="500" alt="man in black" /> </Slide>
-						<Slide index={4}><img className="image-slider" src={imageSlide5} height="300" width="500" alt="man in black" /></Slide>
-						<Slide index={5}><img className="image-slider" src={imageSlide6} height="300" width="500" alt="man in black" /></Slide>
+						<Slide index={0}> <img className="image-slider" src={imageSlide4} height="410" width="728" alt="man in black" /> </Slide>
+						<Slide index={1}><img className="image-slider" src={imageSlide5} height="344" width="496" alt="man in black" /></Slide>
+						<Slide index={2}><img className="image-slider" src={imageSlide6} height="332" width="590" alt="man in black" /></Slide>
+						<Slide index={3}> <img className="image-slider" src={imageSlide4} height="410" width="728" alt="man in black" /> </Slide>
+						<Slide index={4}><img className="image-slider" src={imageSlide5} height="344" width="496"alt="man in black" /></Slide>
+						<Slide index={5}><img className="image-slider" src={imageSlide6}  height="332" width="590"  alt="man in black" /></Slide>
 					</Slider>
 					<ButtonBack className="btn-move btn-slide1"><span> <i className="fas fa-arrow-left"></i></span></ButtonBack>
 					<ButtonNext className=" btn-move btn-slide2"><span><i className="fas fa-arrow-right"></i></span></ButtonNext>
