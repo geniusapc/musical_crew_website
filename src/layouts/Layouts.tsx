@@ -1,23 +1,21 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import Home from "../pages/Home";
 import Header from "../components/Header/Header";
-import Login from "../pages/Login";
-import Register from "../pages/Register";
-import Galleries from "../pages/GalleryGridList";
 import Footer from "../components/Footer";
-import ViewEvents from "../pages/ViewEvent";
-import ContactPage from "../pages/ContactPage";
 import ErrorPage from "../pages/ErrorPage";
-import AdminDashboard from "../admin-dashboard/AdminPage";
-import AdminGallery from '../admin-dashboard/admin-actions/Gallery';
-
+import Loader from './Loader';
 import {
 	BrowserRouter as Router,
-	Switch,
-	Route,
-	Redirect,
-} from "react-router-dom";
-
+	Route
+}
+	from "react-router-dom";
+const Login = lazy(() => import("../pages/Login"));
+const Register = lazy(() => import("../pages/Register"));
+const Galleries = lazy(() => import("../pages/GalleryGridList"));
+const ViewEvents = lazy(() => import("../pages/ViewEvent"));
+const ContactPage = lazy(() => import("../pages/ContactPage"));
+const AdminDashboard = lazy(() => import("../admin-dashboard/AdminPage"));
+const AdminGallery = lazy(() => import('../admin-dashboard/admin-actions/Gallery'));
 interface RouteProps {
 	close?: any;
 }
@@ -26,8 +24,8 @@ const Layouts: React.FC<RouteProps> = () => {
 		<div className="layout">
 			<Router>
 				<Header />
-				<Switch>
-					<Route exact path="/" component={Home} />
+				<Route exact path="/" component={Home} />
+				<Suspense fallback={Loader}>
 					<Route exact path="/our-galleries" component={Galleries} />
 					<Route exact path="/login" component={Login} />
 					<Route exact path="/create-account" component={Register} />
@@ -36,8 +34,8 @@ const Layouts: React.FC<RouteProps> = () => {
 					<Route exact path="/page-not-found" component={ErrorPage} />
 					<Route exact path="/admin" component={AdminDashboard} />
 					<Route exact path="/admin/galleries" component={AdminGallery} />
-					<Redirect to="/page-not-found" />
-				</Switch>
+					{/* <Redirect to="/page-not-found" /> */}
+				</Suspense>
 				<Footer />
 			</Router>
 		</div>

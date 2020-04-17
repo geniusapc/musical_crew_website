@@ -35,7 +35,8 @@
     "eject": "react-scripts eject",
     "client": "npm start",
     "server": "npm run server --prefix server",
-    "dev": "concurrently \"npm run server\" \"npm run client\" "
+    "dev": "concurrently \"npm run server\" \"npm run client\" ",
+    "dev-server": "http-server -p 1335 build -c-1"
   },
   "eslintConfig": {
     "extends": "react-app"

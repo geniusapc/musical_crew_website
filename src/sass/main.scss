@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
 @import "./utils";
 @import "./variables";
 @import "./media";
@@ -14,21 +14,20 @@
   width: 100%;
   background: black;
   justify-content: space-between;
-  // box-shadow: 4px 1px 4px 1px $white;
   z-index: 3;
   margin-bottom: 3rem;
   &-logo {
-    margin: -1rem 0;
-    padding: 0.3rme;
+    margin: -1rem  ;
+    position: fixed;
+    padding:9 1.3rem;
     img {
-      height: 7rem;
+      height: 9rem;
       width: 9rem;
-      border-radius: 50%;
     }
   }
   &-nav {
     display: flex;
-    margin: 2rem 3rem;
+    margin: 2rem 15rem;
   }
   &-search {
     @include DisplayFlex(row, nowrap);
@@ -318,21 +317,19 @@
     transition: background 0.4s ease-out;
   }
   span {
-    margin: 1rem 2rem;
+    margin: 1rem;
     word-wrap: none;
+    text-align: left;
     &:nth-child(2) {
-      width: 30%;
-    }
-    &:nth-child(3) {
-      width: 30%;
+      width: 80%;
     }
     &:nth-child(1) {
       background-color: $primary;
-      padding: 0.1rem 0.5rem;
+      padding: 0.1rem .5rem ;
       border-radius: 0.2rem;
       margin: 0.7rem 0.3rem;
       font-weight: 500;
-      text-align: left;
+      width: 8%;
     }
   }
 }
@@ -348,10 +345,10 @@
 //*****Card*****//
 .eventCard {
   background-color: rgba($color: $gray, $alpha: 1);
-  margin: 1.7rem auto;
+  margin: 2.7rem auto;
   border-radius: 0.4rem;
   border: none;
-  // padding: 0 0 0.3rem 0;
+  
   width: 80%;
   &-body {
     color: $white;
@@ -486,7 +483,7 @@
 .gallery {
   padding: 1rem 0.5rem;
   overflow: hidden !important;
-  margin: 2.5rem 0;
+  margin: 4.5rem 0;
   h4 {
     font-size: 2.6rem;
     text-align: center;

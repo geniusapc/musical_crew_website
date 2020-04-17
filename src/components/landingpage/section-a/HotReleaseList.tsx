@@ -19,8 +19,7 @@ const HotReleaseList: React.FC<Props> = ({ serialno, title, arthur, link }) => {
 		<a href={link} target="_blanck">
 			<div className="music-list" onClick={() => (dispatch(GetSpecificID(serialno)))}>
 				<span>{serialno}</span>
-				<span>{title}</span>
-				<span>{arthur}</span>
+				<span>{title} {arthur}</span>
 			</div>
 		</a>
 	);
