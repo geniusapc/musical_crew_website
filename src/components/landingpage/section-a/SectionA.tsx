@@ -24,7 +24,7 @@ const SectionA: React.FC<Props> = () => {
 				<h3>
 					Latest <span>Release</span>
 				</h3>
-				<p>Lorem ipsum dolor sit, amet consectetur magnam labore.</p>
+				<p>Best the first to hear our newest release</p>
 				<HotRelease />
 				<div>
 					<img src={spotify} alt="spotify" />

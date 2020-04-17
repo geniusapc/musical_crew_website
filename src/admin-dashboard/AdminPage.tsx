@@ -67,8 +67,6 @@ const AdminPage: React.FC<Props> = () => {
 				</Link>
 				<Divider />
 			</ul>
-		
-
 		</div>
 	);
 
@@ -86,7 +84,6 @@ const AdminPage: React.FC<Props> = () => {
 					{list("left")}
 				</SwipeableDrawer>
 			</div>
-
 			<AdminViews />
 		</div>
 	);

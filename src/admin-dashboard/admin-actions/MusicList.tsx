@@ -99,7 +99,6 @@ const MusicList: React.FC = () => {
                 }}>
                   <Delete color="primary" />
                 </span>
-
               </ListItemSecondaryAction>
             </ListItem>
           )

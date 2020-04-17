@@ -114,7 +114,7 @@ const ImageGridList: React.FC<Props> = () => {
 
 	return (
 		<div className="gallery">
-			<h4>Our Events <span>Galleries</span> </h4>
+			<h4><span>Galleries</span> </h4>
 			<div className={classes.root}>
 				
 				<GridList cellHeight={160} className={classes.gridList} cols={3}>

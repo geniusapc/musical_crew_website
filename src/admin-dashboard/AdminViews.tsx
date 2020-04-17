@@ -3,7 +3,7 @@ import MusicList from "./charts/MusicList";
 import Events from "./charts/Events";
 import Users from "./charts/Users";
 
-interface Props {}
+interface Props { }
 
 const AdminViews: React.FC<Props> = () => {
 	return (

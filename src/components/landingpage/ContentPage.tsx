@@ -12,15 +12,13 @@ const ContentPage: React.FC<Props> = () => {
 		<div className="content" >
 			<div>
 				<h1>
-					Peace of Mind to <br /> Communicate Freely
+					Peace of Mind <br />From the Power of Music
 				</h1>
 				<p>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae
+					This is a place where you listen to your most favorite cool music 
 					<br />
-					tenetur quia architecto incidunt nemo numquam ut eos quam eum
-					distinctio.
+					that touches and uplift the soul, we'll give you our word <em>body & soul</em>
 				</p>
-
 				<a href="#about" className="btn">
 					LEARN MORE <ArrowRight />
 				</a>

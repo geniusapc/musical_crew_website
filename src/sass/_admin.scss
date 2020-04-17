@@ -1,83 +1,110 @@
-@import './utils';
-@import './variables';
-@import './mixixns';
+@import "./utils";
+@import "./variables";
+@import "./mixixns";
+
+.admin {
+  padding: 8rem 0;
+}
 .admin-home {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    // margin: .5rem 1rem;
-    div {
-        margin: .6rem;
-        // box-shadow: 2px 2px 3px 4px $box-shadow;
-        &:nth-child(3) {
-            grid-column: 3/4;
-            grid-row: 1/3;
-        }
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  // margin: 6rem 2rem  0rem 2rem ;
+  div {
+    margin: 1rem;
+    &:nth-child(3) {
+      grid-column: 3/4;
+      grid-row: 1/3;
     }
+  }
 }
 
+.menu-btn {
+  @include PositionCenter(20%, 2%, fixed);
+  background-color: $light;
+  border-radius: 50%;
+  padding: 0.3rem 0;
+  cursor: pointer;
+}
 
+.admin-nav {
+  padding: 0 1rem;
+  list-style: none;
+  width: 20vw;
+}
+.admin-nav-list {
+  padding: 0.6rem 5rem;
+  text-decoration: none;
+  & :hover {
+    background-color: $light;
+  }
+}
 
 .admin-views {
-    background-color: $white;
-    color: $black !important;
-    margin: 0 auto;
-    // height: 100vh;
-    text-align: center;
-    h4 {
-        color: $primary;
-        font-size: 2rem;
-        padding: 1.3rem 0;
-    }
+  background-color: $white;
+  color: $black !important;
+  margin: 4rem auto;
+  // height: 100vh;
+  text-align: center;
+  h4 {
+    color: $primary;
+    font-size: 2rem;
+    padding: 1.3rem 0;
+  }
 }
 
 .open {
-    transform: translateY(-150px);
-    opacity: 0;
-    // transform: translateY(800px);
-    // transition: transform .4s ease-in-out;
+  transform: translateY(-150px);
+  opacity: 0;
 }
 
 .admin-views-form {
-    width: 100%;
-    padding: .2rem;
-    @include PositionCenter(50%, 50%, absolute);
-    height: 100vh;
-    background-color: rgba($color: #000000, $alpha: 0.4);
-    transition: all .4s ease-in-out;
+  width: 100%;
+  padding: 0.2rem;
+  @include PositionCenter(50%, 50%, absolute);
+  height: 100vh;
+  background-color: rgba($color: #000000, $alpha: 0.4);
+  transition: all 0.4s ease-in-out;
+  form {
+    position: relative;
+    width: 40%;
+    background-color: $white;
+    margin: 0 auto;
+    transform: translateY(150px);
+    transition: all 0.4s ease-out;
+    .collapse {
+      float: right;
+      padding: 0.4rem 0.6rem;
+      cursor: pointer;
+      background-color: $light;
+      margin: 0 0 0.4rem 0;
+    }
+    div {
+      margin: 0 1rem;
+      input {
+        padding: 0.5rem 0;
+        width: 100%;
+      }
+      textarea {
+        padding: 0.5rem 0;
+        width: 100%;
+      }
+      input[type="submit"] {
+        margin: 0.6rem 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .admin {
+    .admin-home {
+      display: block;
+    }
+  }
+
+  .admin-views-form {
     form {
-        position: relative;
-        width: 90%;
-        background-color: $white;
-        margin: 0 auto;
-        transform: translateY(150px);
-        transition: all .4s ease-out;
-        .collapse {
-            float: right;
-            padding: .4rem .6rem;
-            cursor: pointer;
-            background-color: $light;
-            margin: 0 0 .4rem 0;
-        }
-        div {
-            color: $black;
-            margin: 0 1rem;
-            label {
-                display: block;
-            }
-            input {
-                padding: .5rem 0;
-                width: 100%;
-            }
-            textarea {
-                padding: .5rem 0;
-                width: 100%;
-            }
-            input[type="submit"] {
-                margin: 0.6rem 0;
-            }
-        }
+      width: 90%;
     }
-    label {
-        color: $black;
-    }
+  }
 }

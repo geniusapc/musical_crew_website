@@ -5,7 +5,9 @@ import SectionB from "../components/landingpage/section-b/SectionB";
 import About from "../components/landingpage/section-a/About";
 import Subscribe from "../components/Subscribe";
 
-interface Props {}
+interface Props {
+
+}
 
 const Home: React.FC<Props> = () => {
 	const [target, setTarget] = useState<boolean>(false);
@@ -17,6 +19,7 @@ const Home: React.FC<Props> = () => {
 	useEffect(() => {
 		const aboutAnimate = new IntersectionObserver(callbackFn);
 		aboutAnimate.observe(refTarget.current);
+
 		return () => {
 			aboutAnimate.disconnect();
 		};

@@ -1,26 +1,38 @@
 @import "./mixixns";
 @media (max-width: 1142px) {
-  .content {
-    &:nth-child(1) {
-      margin: 3.5rem 1rem;
-      padding: 0.5rem;
+  .home {
+    .cardGrid {
+      grid-template-columns: 1fr 1fr;
     }
-    &-image {
-      display: none;
+    .content {
+      margin-top: 6rem !important;
+      &:nth-child(1) {
+        margin: 3.5rem 1rem;
+        padding: 0.5rem;
+      }
+      &-image {
+        display: none;
+      }
     }
   }
+ 
 }
 
 @media (max-width: 1101px) {
   .home {
     .about-wrapper {
       grid-template-columns: 1fr;
+      margin: 4rem 0;
     }
     .about-emphasis {
       height: 15rem;
       width: 20rem;
-      span {
-        top: 40%;
+      left: 8%;
+      .image-slider {
+        margin: 0 auto;
+      }
+      .btn-move {
+        top: 70%;
       }
     }
     .about-text {
@@ -51,7 +63,7 @@
   .form {
     grid-template-columns: 1fr !important;
     padding: 3rem 0;
-    margin: 2rem 0 !important;
+    margin: 5rem 0 !important;
     &-image {
       display: none;
     }
@@ -62,19 +74,46 @@
   .admin-home {
     display: grid;
     grid-template-columns: repeat(2, 1fr) !important;
-    // margin: .5rem 1rem;
-    // div {
-    //     margin: .6rem;
-    //     // box-shadow: 2px 2px 3px 4px $box-shadow;
-    //     &:nth-child(3) {
-    //         grid-column: 3/4;
-    //         grid-row: 1/3;
-    //     }
-    // }
+    margin: 0.5rem 1rem;
+    div {
+      margin: 0.6rem;
+      // box-shadow: 2px 2px 3px 4px $box-shadow;
+      &:nth-child(3) {
+        grid-column: 3/4;
+        grid-row: 1/3;
+      }
+    }
   }
 }
 
 @media (max-width: 768px) {
+  .layout {
+    .view-event {
+      grid-template-columns: 1fr;
+      &-content {
+        h2 {
+          font-size: 1.5rem;
+        }
+        img {
+          height: 200px;
+          width: 300px;
+        }
+      }
+    }
+  }
+  .home {
+    .subscribe {
+      h5 {
+        font-size: 1.3rem;
+      }
+      &-search {
+        width: 80%;
+      }
+    }
+    .cardGrid {
+      display: block;
+    }
+  }
   .header {
     &-logo {
       padding: 0.3rem;
@@ -111,17 +150,13 @@
       transition: opacity 0.4s ease-in;
     }
     .header-search {
-      @include PositionCenter(17%, 50%, absolute);
+      @include PositionCenter(120%, 50%, absolute);
       align-items: center;
-      margin: auto;
+      margin: 0.4rem auto;
       transition: all 0.2s ease-out;
-      background-color: $primary;
-      input {
-        padding: 1.6rem 7rem;
-        background-color: transparent;
-        // color: $black !important;
-        // width: 100% !important
-      }
+      background-color: $white;
+      width: 90%;
+      height: 75%;
     }
   }
   .sectionA {
@@ -130,20 +165,9 @@
       width: 80%;
     }
   }
-  .subscribe {
-    h5 {
-      font-size: 1.2rem;
-    }
-    &-search {
-      width: 80% !important;
-    }
-  }
-  .cardGrid {
-    flex-wrap: wrap-reverse;
-  }
-  .view-event {
-    grid-template-columns: 1fr !important;
-  }
+
+  
+
   .admin-home {
     display: grid;
     grid-template-columns: 1fr !important;

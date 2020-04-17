@@ -10,10 +10,10 @@ interface Props {
 
 const AdminLayouts: React.FC<Props> = ({ close, setUserInterface }) => {
 	useEffect(() => {
-        if (!close) {
-            setUserInterface();
-        }
-		
+		if (!close) {
+			setUserInterface();
+		}
+
 	}, []);
 
 	return (

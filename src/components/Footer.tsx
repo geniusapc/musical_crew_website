@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
 			</div>
 			<div className="footer-team">
 				<blockquote>
-					Developed by <a href="www.vdjhjvdfv.com">@cmcWebCode</a>  <i>FrontEnd</i> &<a href="www.vdjhjvdfv.com">@PrinceArthur</a>  <i>Backend</i>
+					Developed by <a target="_blanck" href="https://twitter.com/cmcWebCode?s=07">@cmcWebCode</a>  <i>FrontEnd</i> &<a target="_blanck" href="https://github.com/youngenius1">@PrinceArthur</a>  <i>Backend</i>
 				</blockquote>{" "}
 				
 			</div>
