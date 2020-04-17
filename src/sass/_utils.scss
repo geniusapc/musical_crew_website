@@ -1,13 +1,14 @@
 @import "./variables";
 // *::after,
-// *::before 
+// *::before
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    a {
-        text-decoration: none !important;
-    }
+}
+
+a {
+    text-decoration: none ;
 }
 
 ::-webkit-scrollbar {
@@ -32,9 +33,13 @@
     border-radius: 40px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: $bg-color;
-    // font-family: 'Baloo Thambi 2', cursive;
+    font-family:  sans-serif;
     color: $black;
     font-size: 1.1rem;
     line-height: 1.7;
