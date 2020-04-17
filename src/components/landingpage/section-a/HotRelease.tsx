@@ -7,7 +7,8 @@ interface RootState {
 	MusicListReducer: Array<{
 		id: number;
 		title: string;
-		duration: string;
+		arthur: string;
+		link:string;
 	}>;
 }
 
@@ -22,7 +23,8 @@ const HotRelease: React.FC = () => {
 					<HotReleaseList
 						title={music.title}
 						serialno={music.id}
-						duration={music.duration}
+						arthur={music.arthur}
+						link={music.link}
 					/>
 				</div>
 			))}
