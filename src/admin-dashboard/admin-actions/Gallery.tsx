@@ -115,18 +115,15 @@ const Gallery: React.FC = () => {
 						<Close color="primary" />
 					</span>
 					<div>
-						<label htmlFor="title">Title</label>
 						<input type="text" placeholder="gallery title" />
 					</div>
 					<div>
-						<label htmlFor="Image">Gallery</label>
 						<input type="file" placeholder="images" />
 					</div>
 					<div>
 						<input type="date" placeholder="date" />
 					</div>
 					<div>
-						<label htmlFor="text">Text</label>
 						<textarea name="text" rows={10} placeholder="type gallery text here"></textarea>
 					</div>
 					<div>

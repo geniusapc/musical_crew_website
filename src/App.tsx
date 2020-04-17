@@ -13,16 +13,23 @@ const theme = createMuiTheme({
 			main: "#202020",
 		},
 	},
+	typography: {
+		fontFamily: [
+
+			'sans-serif',
+		].join(','),
+	},
 });
+
 
 const App: React.FC = () => {
 
 	return (
 		<ThemeProvider theme={theme}>
 			<div>
-				<Layouts  />
+				<Layouts />
 			</div>
-			
+
 		</ThemeProvider>
 	);
 };
