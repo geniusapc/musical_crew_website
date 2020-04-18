@@ -46,7 +46,7 @@ const ViewEvent: React.FC<Props> = ({ match }) => {
   useEffect(() => {
     getSpecificEvent(match.params.id, events);
 
-  })
+  },[match.params.id, events])
   return (
     <>
       <div className="view-event" style={{ color: 'black' }}>

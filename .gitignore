@@ -6,6 +6,10 @@
 /.pnp
 .pnp.js
 
+#vs code workspace
+.vscode
+_redirects
+
 # testing
 /coverage
 
