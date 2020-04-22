@@ -1,6 +1,7 @@
 import React from "react";
 import imageBg from '../../images/maninblack.jpg'
 import ArrowRight from '@material-ui/icons/ArrowRight';
+// import '../../sass/main';
 
 interface Props {
 
@@ -15,7 +16,7 @@ const ContentPage: React.FC<Props> = () => {
 					Peace of Mind <br />From the Power of Music
 				</h1>
 				<p>
-					This is a place where you listen to your most favorite cool music 
+					This is a place where you listen to your most favorite cool music
 					<br />
 					that touches and uplift the soul, we'll give you our word <em>body & soul</em>
 				</p>

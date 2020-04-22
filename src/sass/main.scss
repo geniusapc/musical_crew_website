@@ -1,4 +1,3 @@
-
 @import "./utils";
 @import "./variables";
 @import "./media";
@@ -6,6 +5,48 @@
 @import "./animation";
 @import "./admin";
 //***Header-section****//
+
+.header.dark-mode {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  background: black;
+  color: $white;
+  justify-content: space-between;
+  z-index: 3;
+  margin-bottom: 3rem;
+  &-logo {
+    margin: -1rem;
+    position: fixed;
+    padding: 9 1.3rem;
+    img {
+      height: 9rem;
+      width: 9rem;
+    }
+  }
+  &-nav {
+    display: flex;
+    margin: 2rem 15rem;
+    color: $white !important;
+  }
+  &-search {
+    @include DisplayFlex(row, nowrap);
+    margin: 1.2rem 1rem 0 -4rem;
+    border-radius: 0.2rem;
+    padding: 0.2rem 1rem;
+    height: 2.4rem;
+    width: 25%;
+    input {
+      @include inputSearch;
+      padding: 26px 30px;
+    }
+    span {
+      @include searchBtn;
+    }
+  }
+}
 .header {
   position: fixed;
   top: 0;
@@ -13,13 +54,14 @@
   display: flex;
   width: 100%;
   background: black;
+  color: $white;
   justify-content: space-between;
   z-index: 3;
   margin-bottom: 3rem;
   &-logo {
-    margin: -1rem  ;
+    margin: -1rem;
     position: fixed;
-    padding:9 1.3rem;
+    padding: 9 1.3rem;
     img {
       height: 9rem;
       width: 9rem;
@@ -55,7 +97,7 @@
       margin: 0 2rem;
       a {
         text-decoration: none;
-        color: $white;
+        // color: $white;
         text-transform: uppercase;
         &:hover {
           background-color: $primary;
@@ -156,13 +198,11 @@
   margin: 2rem 0 0 0;
   &:nth-child(1) {
     h1 {
-      color: $white;
       font-size: 3rem;
       word-wrap: break-word;
       margin: 0 0 0.7rem 0;
     }
     p {
-      color: $white;
       word-break: break-all;
       margin: 0 0 3rem 0;
     }
@@ -170,7 +210,7 @@
   &-image {
     margin: 0 -5rem 0 5rem;
     animation: landingpage 1s forwards;
-    transition: opacity .4s ease-out;
+    transition: opacity 0.4s ease-out;
     img {
       height: 30rem;
       width: 40rem;
@@ -180,15 +220,15 @@
 @keyframes landingpage {
   0% {
     opacity: 0;
-    transition: opacity .4s ease-out;
+    transition: opacity 0.4s ease-out;
   }
   50% {
     opacity: 0.5;
-    transition: opacity .4s ease-out;
+    transition: opacity 0.4s ease-out;
   }
-  100%{
+  100% {
     opacity: 1;
-    transition: opacity .4s ease-out;
+    transition: opacity 0.4s ease-out;
   }
 }
 
@@ -197,7 +237,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   place-items: center;
-  background-color: $black;
   margin: 8rem 0;
   &-image {
     margin: -0.9rem 0 0 1.6rem;
@@ -209,14 +248,25 @@
   }
 }
 
-.form-field {
+.form-field.dark-mode {
   background-color: $gray;
+  box-shadow: none;
+  input[type="text"],
+  [type="password"] {
+    border-bottom: $white 1px solid;
+    outline: none;
+  }
+  textarea {
+  }
+}
+.form-field {
+  background: $white;
   width: 60%;
   margin: auto;
   padding: 0.5rem 1rem;
   border-radius: 0.3rem;
+  box-shadow: $box-shadow2;
   h3 {
-    color: $white;
     font-size: 1.3rem;
     padding: 1rem 0;
   }
@@ -224,9 +274,8 @@
     position: relative;
     margin: 1.3rem auto;
     span {
-      color: $white;
       a {
-        color: $primary;  
+        color: $primary;
       }
     }
     .icon {
@@ -239,9 +288,9 @@
       padding: 0.7rem 2rem;
       border: none;
       background: transparent !important;
-      border-bottom: $white 1px solid;
+      border-bottom: black 1px solid;
       outline: none;
-      color: $white;
+      // color: $white;
       &:focus {
         border-bottom: green 1px solid;
       }
@@ -250,7 +299,7 @@
       background-color: transparent;
       width: 90%;
       height: 5rem;
-      color: $white;
+      // color: $white;
       outline: none;
       &:focus {
         border: 1px solid green;
@@ -260,12 +309,15 @@
 }
 
 //****section A*****//
+.sectionA.dark-mode {
+  background:$gray;
+}
 .sectionA {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 0 auto;
   text-align: center;
-  background-color: $gray;
+  background-color: $theme-light;
   height: auto;
   &-list {
     width: 100%;
@@ -274,11 +326,11 @@
       font-size: 2.3rem;
       margin: 0.7rem 0;
       span {
-        color: $white;
+        // color: $white;
       }
     }
     p {
-      color: $white;
+      // color: $white;
       margin: 0.9rem 0;
     }
     div {
@@ -303,7 +355,7 @@
 }
 
 .music-list {
-  color: $white;
+  // color: $white;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -325,7 +377,7 @@
     }
     &:nth-child(1) {
       background-color: $primary;
-      padding: 0.1rem .5rem ;
+      padding: 0.1rem 0.5rem;
       border-radius: 0.2rem;
       margin: 0.7rem 0.3rem;
       font-weight: 500;
@@ -341,17 +393,25 @@
   margin: 0 auto;
 }
 
-
 //*****Card*****//
-.eventCard {
+.eventCard.dark-mode {
   background-color: rgba($color: $gray, $alpha: 1);
+  box-shadow: none;
+  div {
+    span {
+      border: 2px solid $white;
+    }
+  }
+}
+.eventCard {
+  background-color: $white;
+  box-shadow: $box-shadow2;
   margin: 2.7rem auto;
   border-radius: 0.4rem;
   border: none;
-  
   width: 80%;
   &-body {
-    color: $white;
+    // color: $white;
     img {
       background-repeat: no-repeat;
       background-size: 100% 100%;
@@ -363,7 +423,7 @@
       object-fit: cover;
     }
     h3 {
-      font-size: 1.6rem;
+      font-size: $title-md;
       margin: 0.6rem 0.7rem;
       // padding: 1rem 1rem 0.1rem 0.6rem;
     }
@@ -376,8 +436,8 @@
       margin: -1rem 1.2rem;
       padding: 0 0 1rem 0;
       span {
-        border: 2px solid $white;
-        color: $white;
+        border: 2px solid black;
+        // color: $white;
         padding: 0.4rem 0.7rem;
 
         &:hover {
@@ -389,8 +449,8 @@
 }
 
 .event-header {
-  color: $white;
-  font-size: 1.6rem;
+  // color: $white;
+  font-size: $m-font;
   text-align: center;
   margin-top: 1.5rem;
   padding: 0.6rem 0;
@@ -409,14 +469,14 @@
 .view-event {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  background-color: $white;
+  // background-color: $white;
   margin: 6rem 0 0 0;
   padding: 1rem 0;
   &-content {
     margin: 0.7rem 2rem;
     h2 {
       font-size: 2rem;
-      font-weight: 900;
+      font-weight: 500;
       color: $primary;
     }
     h2,
@@ -435,7 +495,6 @@
     .event-text {
       text-align: left;
       padding: 0.5rem 0;
-      color: $bg-color;
       word-break: break-all;
     }
   }
@@ -451,13 +510,11 @@
     div {
       h4 {
         background-color: $primary;
-        color: $white;
         padding: 0.4rem 1.5rem;
         margin: 0.5rem;
       }
     }
     .event-box {
-      background-color: $white;
       border-radius: 0.4rem;
       box-shadow: 1px 1px 3px 1px #ccc;
       width: 100%;
@@ -465,8 +522,8 @@
       img {
         height: 10rem;
         width: 100%;
-        border-top-right-radius: .4rem ;
-        border-top-left-radius: .4rem ;
+        border-top-right-radius: 0.4rem;
+        border-top-left-radius: 0.4rem;
       }
       div {
         word-break: break-all;
@@ -487,7 +544,7 @@
   h4 {
     font-size: 2.6rem;
     text-align: center;
-    color: $white;
+    // color: $white;
     font-weight: 700;
     margin: 0.6rem auto;
     span {
@@ -504,12 +561,6 @@
   }
 }
 
-// .contact-pagee {
-//     // margin: 3rem auto;
-//     @include PositionCenter(50%,
-//     50%,
-//     absolute);
-// }
 //******Subscribe Section*****//
 .subscribe {
   background: linear-gradient(to left, rgba(51, 22, 22, 0.7), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
@@ -523,7 +574,7 @@
     text-align: center;
     margin: -0.1rem 0;
     padding: 2rem 0 0 0;
-    font-size: 1.7rem;
+    font-size: $m-font;
     span {
       color: $primary;
     }
@@ -557,21 +608,26 @@
 }
 
 ///*****Footer******//
-.footer {
-  color: $white;
-  text-align: center;
+.footer.dark-mode {
   background-color: $gray;
+}
+.footer {
+  text-align: center;
+  background-color: $theme-light;
   margin: -0.4rem 0;
   h6 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 400;
   }
   & > div {
     margin: 0.4rem 0;
   }
   a {
-    color: $white;
     font-weight: 400;
+  }
+  blockquote,
+  cite {
+    font-size: .8rem;
   }
   &-list {
     ul {
@@ -581,7 +637,7 @@
         margin: 0.4rem 0.5rem;
         list-style: none;
         a {
-          color: $white;
+          // color: $white;
           &:hover {
             color: $primary;
           }
