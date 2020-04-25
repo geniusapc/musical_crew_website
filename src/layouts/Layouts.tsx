@@ -1,8 +1,10 @@
 import React, { lazy, Suspense } from "react";
 import Home from "../pages/Home";
+// import ThemeMode from '../themeChanger';
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer";
 import Loader from './Loader';
+import '../sass/main.scss';
 import {
 	BrowserRouter as Router,
 	Route,
@@ -19,6 +21,7 @@ interface RouteProps {
 	close?: any;
 }
 const Layouts: React.FC<RouteProps> = () => {
+
 	return (
 		<div className="layout">
 			<Router>
@@ -36,7 +39,6 @@ const Layouts: React.FC<RouteProps> = () => {
 				<Footer />
 			</Router>
 		</div>
-
 	);
 };
 
