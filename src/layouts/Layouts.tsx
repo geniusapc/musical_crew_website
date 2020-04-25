@@ -2,11 +2,10 @@ import React, { lazy, Suspense } from "react";
 import Home from "../pages/Home";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer";
-import ErrorPage from "../pages/ErrorPage";
 import Loader from './Loader';
 import {
 	BrowserRouter as Router,
-	Route
+	Route,
 }
 	from "react-router-dom";
 const Login = lazy(() => import("../pages/Login"));
@@ -25,17 +24,15 @@ const Layouts: React.FC<RouteProps> = () => {
 			<Router>
 				<Header />
 				<Route exact path="/" component={Home} />
-				<Suspense fallback={Loader}>
-					<Route exact path="/our-galleries" component={Galleries} />
-					<Route exact path="/login" component={Login} />
-					<Route exact path="/create-account" component={Register} />
-					<Route exact path="/events/:id" component={ViewEvents} />
-					<Route exact path="/contact-us" component={ContactPage} />
-					<Route exact path="/page-not-found" component={ErrorPage} />
-					<Route exact path="/admin" component={AdminDashboard} />
-					<Route exact path="/admin/galleries" component={AdminGallery} />
-					{/* <Redirect to="/page-not-found" /> */}
-				</Suspense>
+					<Suspense fallback={<Loader />}>
+						<Route exact path="/our-galleries" component={Galleries} />
+						<Route exact path="/login" component={Login} />
+						<Route exact path="/create-account" component={Register} />
+						<Route exact path="/events/:id" component={ViewEvents} />
+						<Route exact path="/contact-us" component={ContactPage} />
+						<Route exact path="/admin" component={AdminDashboard} />
+						<Route exact path="/admin/galleries" component={AdminGallery} />
+					</Suspense>
 				<Footer />
 			</Router>
 		</div>

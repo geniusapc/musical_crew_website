@@ -1,75 +1,48 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch, TypedUseSelectorHook } from 'react-redux';
 import { ToogleTheme } from './redux-store/actions/Toogle';
+import nightMode from './images/moonlight.svg';
+import dayMode from './images/sun.svg';
 import './sass/main.scss';
-
-interface Props {
-
-}
+interface Props { }
 interface State {
-  ThemeSwitch: any;
+  ThemeSwitch: boolean;
 }
 
 const ThemeChanger: React.FC<Props> = () => {
   const useTypeSelector: TypedUseSelectorHook<State> = useSelector;
   const themeState = useTypeSelector(state => state.ThemeSwitch);
   const dispatch = useDispatch();
-  console.log(themeState);
-
-  // const [state, setState] = useState<boolean>(true);
   const changeTheme = () => {
-    const header = document.querySelector('.header');
-    const card = document.querySelectorAll('.eventCard');
-    const form = document.querySelector('.form-field');
-    const footer = document.querySelector('.footer');
-    const sectionA = document.querySelector('.sectionA');
-    dispatch(ToogleTheme())
-    // const storeThemeState = localStorage.setItem('theme', JSON.stringify('DARK_THEME'));
-    // const getThemeState = JSON.parse(localStorage.getItem('theme'));
-    // if () {
-
-    // }
+    dispatch(ToogleTheme());
     if (themeState) {
+      localStorage.setItem('theme', JSON.stringify(true));
       document.body.classList.add('dark-mode');
-      header?.classList.add('dark-mode');
-      card?.forEach(cd => {
-        cd.classList.add('dark-mode');
-      });
-      form?.classList.add('dark-mode');
-      footer?.classList.add('dark-mode');
-      sectionA?.classList.add('dark-mode');
     } else {
       document.body.classList.remove('dark-mode');
-      header?.classList.remove('dark-mode');
-      card?.forEach(cd => {
-        cd.classList.remove('dark-mode');
-      });
-      form?.classList.remove('dark-mode');
-      footer?.classList.remove('dark-mode');
-      sectionA?.classList.remove('dark-mode');
+      localStorage.setItem('theme', JSON.stringify(!true));
     }
-    // localStorage.setItem('DARK_MODE', themeState)
   };
-
-  // useEffect(() => {
-  //   return () => {
-  //     changeTheme();
-  //   }
-  // }, [state]);
-
+  useEffect(() => {
+    const store = localStorage.getItem('theme');
+    if (store === 'true') return document.body.classList.add('dark-mode');
+  }, [themeState]);
   return (
-    <div>
-      <button style={{
-        background: 'red',
-        padding: '10px 30px',
-        position: 'fixed',
-        zIndex: 3,
-        top: '3%',
-        left: '60%',
-      }} onClick={changeTheme}> CLICK ME</button>
-    </div>
+    <>
+      <div>
+        <button style={{
+          position: 'fixed',
+          zIndex: 3,
+          top: '3.1%',
+          left: '60%',
+          border: 'none',
+          outline: 'none',
+          cursor: 'pointer',
+          background: '#000'
+        }} onClick={changeTheme}>{themeState ? <img src={nightMode} alt="day light" height="35" width="35" /> : <img src={dayMode} alt="day light" height="35" width="35" />}</button>
+      </div>
+    </>
   );
 }
-
 
 export default ThemeChanger;

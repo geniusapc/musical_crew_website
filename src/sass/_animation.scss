@@ -1,126 +1,155 @@
 @import "./variables";
 @import "./utils";
+
+/*
+page contnent animation
+*/
+
+@keyframes heading {
+  from {
+    transform: translateX(-100px);
+    transition: transform 0.4s ease-out;
+    opacity: 0.2;
+  }
+  to {
+    transform: translateX(0px);
+    transition: transform 0.4s ease-out;
+    opacity: 1;
+  }
+}
+@keyframes wordtag {
+  from {
+    transform: translateY(50px);
+    transition: transform 0.4s ease-out;
+    opacity: 0.2;
+  }
+  to {
+    transform: translateY(0px);
+    transition: transform 0.4s ease-out;
+    opacity: 1;
+  }
+}
+
 /*
 About Page styling is here because it has lots of animation styles
 */
 
 .about-wrapper {
-    margin: 2rem  auto -2.8rem auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  margin: 2rem auto -2.8rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .about-text {
-    // color: $white;
-    margin: 0.5rem 0 0 4rem;
-    p {
-        padding: 0.5rem 1.2rem;
-        word-wrap: break-word;
+  // color: $white;
+  margin: 0.5rem 0 0 4rem;
+  p {
+    padding: 0.5rem 1.2rem;
+    word-wrap: break-word;
+  }
+  span {
+    text-align: center;
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 0.2rem;
+    &:nth-child(6) {
+      margin: 0 0 0 0.5rem;
     }
+    &:nth-child(7) {
+      margin: 0 0 0 0.5rem;
+    }
+  }
+  &-title {
+    text-align: center;
     span {
-        text-align: center;
-        display: inline-block;
-        font-size: 3rem;
-        font-weight: 900;
-        margin: 0.2rem;
-        &:nth-child(6) {
-            margin: 0 0 0 0.5rem;
-        }
-        &:nth-child(7) {
-            margin: 0 0 0 0.5rem;
-        }
+      // text-align: center;
+      // display: inline-block;
+      // font-size: 3rem;
+      // font-weight: 900;
+      // margin: .2rem;
+      transform: translate(-160px, 0) scale(0.4);
+      animation: animate 1s forwards;
+      &:nth-child(2) {
+        animation-delay: 0.05s;
+      }
+      &:nth-child(3) {
+        animation-delay: 0.1s;
+      }
+      &:nth-child(4) {
+        animation-delay: 0.15s;
+      }
+      &:nth-child(5) {
+        animation-delay: 0.2s;
+        margin: 0 0.9rem 0 0;
+      }
+      &:nth-child(6) {
+        animation-delay: 0.25s;
+        margin: 0 0 0 0.5rem;
+      }
+      &:nth-child(7) {
+        animation-delay: 0.3s;
+        margin: 0 0 0 0.5rem;
+      }
     }
-    &-title {
-        text-align: center;
-        span {
-            // text-align: center;
-            // display: inline-block;
-            // font-size: 3rem;
-            // font-weight: 900;
-            // margin: .2rem;
-            transform: translate(-160px, 0) scale(0.4);
-            animation: animate 1s forwards;
-            &:nth-child(2) {
-                animation-delay: 0.05s;
-            }
-            &:nth-child(3) {
-                animation-delay: 0.1s;
-            }
-            &:nth-child(4) {
-                animation-delay: 0.15s;
-            }
-            &:nth-child(5) {
-                animation-delay: 0.2s;
-                margin: 0 0.9rem 0 0;
-            }
-            &:nth-child(6) {
-                animation-delay: 0.25s;
-                margin: 0 0 0 0.5rem;
-            }
-            &:nth-child(7) {
-                animation-delay: 0.3s;
-                margin: 0 0 0 0.5rem;
-            }
-        }
-    }
+  }
 }
 
 @keyframes animate {
-    40% {
-        transform: translate(50px, 0) scale(0.7);
-        opacity: 1;
-        color: #fff;
-    }
-    60% {
-        color: wheat;
-    }
-    80% {
-        transform: translate(0) scale(2);
-        opacity: 0;
-    }
-    100% {
-        transform: translate(0) scale(1);
-    }
+  40% {
+    transform: translate(50px, 0) scale(0.7);
+    opacity: 1;
+    color: #fff;
+  }
+  60% {
+    color: wheat;
+  }
+  80% {
+    transform: translate(0) scale(2);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0) scale(1);
+  }
 }
 
- //****Carousel slide btn*****//
+//****Carousel slide btn*****//
 
 .about-emphasis {
-    position: relative;
-    height: 22rem;
-    width: 37rem;
-    left: 20%;
-    top: -3%;
+  position: relative;
+  height: 22rem;
+  width: 37rem;
+  left: 20%;
+  top: -3%;
 
-    .image-slider {
-        margin: 0 6rem ;
-    }
-    .btn-move {
-        // color: $white;
-        font-size: 1.4rem;
-        position: absolute;
-        background-color: $black;
-        border: none;
-        padding: .3rem .9rem ;
-        border-radius: 50%;
-        top: 50%;
-        left: 30%;
-        outline: none;
-        margin:0 10rem;
-    }
+  .image-slider {
+    margin: 0 6rem;
+  }
+  .btn-move {
+    // color: $white;
+    font-size: 1.4rem;
+    position: absolute;
+    background-color: $black;
+    border: none;
+    padding: 0.3rem 0.9rem;
+    border-radius: 50%;
+    top: 50%;
+    left: 30%;
+    outline: none;
+    margin: 0 10rem;
+  }
 
-    .btn-slide1 {
-        margin: 0  7rem 0 0 ;
-    }
-
+  .btn-slide1 {
+    margin: 0 7rem 0 0;
+  }
 }
 
 @keyframes animateword {
-    0%,
-    100% {
-        clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
-    }
-    50% {
-        clip-path: polygon(0% 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
-    }
+  0%,
+  100% {
+    clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+  }
+  50% {
+    clip-path: polygon(0% 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+  }
 }
