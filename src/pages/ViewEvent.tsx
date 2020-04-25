@@ -37,16 +37,15 @@ const ViewEvent: React.FC<Props> = ({ match }) => {
     img: string;
     text: string;
   }>) => {
-    events.filter(data => {
-      if (data.title === id) {
-        return setSpecificEvent(data);
-      }
+    const filteredEvent = events.filter(data => {
+      if (data.title === id) return setSpecificEvent(data);
     })
+    return filteredEvent;
   };
   useEffect(() => {
     getSpecificEvent(match.params.id, events);
 
-  },[match.params.id, events])
+  }, [match.params.id, events])
   return (
     <>
       <div className="view-event" style={{ color: 'black' }}>
@@ -57,10 +56,10 @@ const ViewEvent: React.FC<Props> = ({ match }) => {
           <img src={specificEvent.img} alt="News " />
           <p className="event-text">{specificEvent.text}</p>
           <div className="view-event-socials">
-            <span><FacebookShareButton url={`/events/${specificEvent.title}`}><FacebookIcon size={32} round={true} /></FacebookShareButton></span>
-            <span><TwitterShareButton url={`/events/${specificEvent.title}`}><TwitterIcon size={32} round={true} /></TwitterShareButton></span>
-            <span><WhatsappShareButton url={`/events/${specificEvent.title}`}><WhatsappIcon size={32} round={true} /></WhatsappShareButton></span>
-           
+            <span><FacebookShareButton url={`https://soft-soundz.netlify.app/events/${specificEvent.title}`}><FacebookIcon size={32} round={true} /></FacebookShareButton></span>
+            <span><TwitterShareButton url={`https://soft-soundz.netlify.app/events/${specificEvent.title}`}><TwitterIcon size={32} round={true} /></TwitterShareButton></span>
+            <span><WhatsappShareButton url={`https://soft-soundz.netlify.app/events/${specificEvent.title}`}><WhatsappIcon size={32} round={true} /></WhatsappShareButton></span>
+
           </div>
         </div>
         <div className="view-event-all">
@@ -72,7 +71,7 @@ const ViewEvent: React.FC<Props> = ({ match }) => {
               <Link to={`/events/${event.title}`}>
                 <img src={event.img} alt="news" />
                 <div>
-                  <h3>{event.title}</h3>
+                  <h5>{event.title}</h5>
                 </div>
               </Link>
             </div>
