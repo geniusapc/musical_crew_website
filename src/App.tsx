@@ -1,6 +1,7 @@
 
 import React from 'react';
 import Layouts from "./layouts/Layouts";
+import ThemeMode from './themeChanger';
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 
 const theme = createMuiTheme({
@@ -24,6 +25,7 @@ const App: React.FC = () => {
 	return (
 		<ThemeProvider theme={theme}>
 			<Layouts />
+			<ThemeMode/>
 		</ThemeProvider>
 	);
 };
