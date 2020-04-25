@@ -13,8 +13,8 @@ const useStyles = makeStyles((theme: Theme) =>
 		},
 		gridList: {
 			width: 800,
-            height: 400,
-            
+			height: 400,
+
 		}
 	})
 );
@@ -30,78 +30,91 @@ interface Props {
 
 const tileData = [
 	{
+		id: 1,
 		img: "https://source.unsplash.com/random",
 		title: "Image",
 		author: "author",
 		cols: 2
 	},
 	{
+		id: 2,
 		img: "https://source.unsplash.com/random",
 		title: "Image",
 		author: "author",
 		cols: 1
 	},
 	{
+		id: 3,
 		img: "https://source.unsplash.com/random",
 		title: "Image",
 		author: "author",
 		cols: 1
 	},
 	{
+		id: 4,
 		img: "https://source.unsplash.com/random",
 		title: "Image",
 		author: "author",
 		cols: 2
 	},
 	{
+		id: 5,
 		img: "https://source.unsplash.com/random",
 		title: "Image",
 		author: "author",
 		cols: 1
 	},
 	{
+		id: 6,
 		img: "https://source.unsplash.com/random",
 		title: "Image",
 		author: "author",
 		cols: 1
 	},
 	{
+		id: 7,
 		img: "https://source.unsplash.com/random",
 		title: "Image",
 		author: "author",
 		cols: 1
 	},
 	{
+		id: 8,
 		img: "https://source.unsplash.com/random",
 		title: "Image",
 		author: "author",
 		cols: 1
 	},
 	{
+		id: 9,
 		img: "https://source.unsplash.com/random",
 		title: "Image",
 		author: "author",
 		cols: 2
 	},
 	{
+		id: 10,
 		img: "https://source.unsplash.com/random",
 		title: "Image",
 		author: "author",
 		cols: 2
 	},
 	{
+		id: 11,
 		img: "https://source.unsplash.com/random",
 		title: "Image",
 		author: "author",
 		cols: 1
 	},
 	{
+		id: 12,
 		img: "https://source.unsplash.com/random",
 		title: "Image",
 		author: "author",
 		cols: 1
 	},
 	{
+		id: 13,
 		img: "https://source.unsplash.com/random",
 		title: "Image",
 		author: "author",
@@ -116,10 +129,10 @@ const ImageGridList: React.FC<Props> = () => {
 		<div className="gallery">
 			<h4><span>Galleries</span> </h4>
 			<div className={classes.root}>
-				
+
 				<GridList cellHeight={160} className={classes.gridList} cols={3}>
 					{tileData.map(tile => (
-						<GridListTile key={tile.img} cols={tile.cols || 1}>
+						<GridListTile key={tile.id} cols={tile.cols || 1}>
 							<img className="gallery-image" src={tile.img} alt={tile.title} />
 						</GridListTile>
 					))}

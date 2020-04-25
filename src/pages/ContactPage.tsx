@@ -3,6 +3,7 @@ import AccountCircle from "@material-ui/icons/AccountCircle";
 import Person from '@material-ui/icons/Person';
 import Phone from '@material-ui/icons/Phone';
 import bodyImage from '../images/maninblack.jpg';
+import bodyImage2 from '../images/login2.svg';
 
 interface Props {
 	cols?: string;
@@ -14,6 +15,7 @@ const ContactPage: React.FC<Props> = ({ cols }) => {
 			<div className="form">
 				<div className="form-image">
 					<img src={bodyImage} alt="music girl" />
+					<img src={bodyImage2} alt="music girl" />
 				</div>
 				<form className="form-field">
 					<h3> HAVE A MESSAGE FOR US ?</h3>

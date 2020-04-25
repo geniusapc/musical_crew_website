@@ -1,29 +1,18 @@
-import React, { useEffect } from "react";
-import { useSelector, useDispatch, TypedUseSelectorHook } from 'react-redux';
-import { ToogleTheme } from '../redux-store/actions/Toogle';
+import React from "react";
 import ladyMusic from "../images/maninblack.jpg";
+import ladyMusic2 from "../images/login2.svg";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import Lock from "@material-ui/icons/Lock";
 import { Link } from 'react-router-dom';
 
 interface Props { }
-interface State {
-	ThemeSwitch: boolean;
-}
 
 const Login: React.FC<Props> = () => {
-	const useTypeSelector: TypedUseSelectorHook<State> = useSelector;
-	const themeState = useTypeSelector(state => state.ThemeSwitch);
-	const dispatch = useDispatch();
-	useEffect(() => {
-		return () => {
-			dispatch(ToogleTheme());
-		}
-	}, []);
 	return (
 		<div className="form">
 			<div className="form-image">
 				<img src={ladyMusic} alt="music girl" />
+				<img src={ladyMusic2} alt="music girl" />
 			</div>
 			<form className="form-field">
 				<h3>LOGIN INTO YOUR ACCOUNT</h3>

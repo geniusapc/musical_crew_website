@@ -1,5 +1,6 @@
 import React from "react";
 import imageBg from '../../images/maninblack.jpg'
+import imageBg2 from '../../images/man.jpg'
 import ArrowRight from '@material-ui/icons/ArrowRight';
 // import '../../sass/main';
 
@@ -26,6 +27,7 @@ const ContentPage: React.FC<Props> = () => {
 			</div>
 			<div className="content-image">
 				<img src={imageBg} alt="Landing " />
+				<img src={imageBg2}  alt="Landing " />
 			</div>
 		</div>
 	);
